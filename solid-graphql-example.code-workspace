@@ -1,0 +1,106 @@
+{
+  "folders": [
+    {
+      "name": "ROOT",
+      "path": ".",
+    },
+    {
+      "path": "database",
+    },
+    {
+      "path": "storage",
+    },
+    {
+      "path": "pubsub",
+    },
+    {
+      "path": "backend",
+    },
+    {
+      "path": "frontend",
+    },
+    {
+      "path": "traefik",
+    },
+    {
+      "path": "log-router",
+    },
+    {
+      "path": "deploy",
+    },
+  ],
+  "settings": {
+    "files.associations": {
+      "*.css": "tailwindcss",
+    },
+    "files.exclude": {
+      "database": true,
+      "storage": true,
+      "pubsub": true,
+      "backend": true,
+      "frontend": true,
+      "deploy": true,
+      "traefik": true,
+      "log-router": true,
+      "*.crt": true,
+      "*.key": true,
+    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+    },
+    "[json]": {
+      "editor.codeActionsOnSave": {
+        "source.sortPackageJson": "explicit",
+      },
+    },
+    "[markdown]": {
+      "editor.tabSize": 2,
+    },
+    "[nginx]": {
+      "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf",
+    },
+    "[prisma]": {
+      "editor.defaultFormatter": "Prisma.prisma",
+    },
+    "typescript.preferences.autoImportFileExcludePatterns": [
+      "@kobalte/core",
+      "solid-js/types/reactive",
+      "solid-js/types/render",
+      "solid-js/types/server",
+    ],
+    "typescript.preferences.includePackageJsonAutoImports": "on",
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "unional.vscode-sort-package-json",
+      "bradlc.vscode-tailwindcss",
+      "dbaeumer.vscode-eslint",
+      "graphql.vscode-graphql",
+      "solidjs-community.solid-snippets",
+      "ms-vscode.makefile-tools",
+      "prisma.prisma",
+      "streetsidesoftware.code-spell-checker",
+      "ahmadalli.vscode-nginx-conf",
+      "hashicorp.hcl",
+      "vitest.explorer",
+      "ms-azuretools.vscode-docker",
+    ],
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "watch",
+        "command": "pnpm",
+        "args": ["run", "watch"],
+        "isBackground": true,
+        "runOptions": {
+          "runOn": "folderOpen",
+        },
+      },
+    ],
+  },
+}

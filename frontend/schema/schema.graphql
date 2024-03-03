@@ -1,0 +1,229 @@
+"""
+The `Byte` scalar type represents byte value as a Buffer
+"""
+scalar Byte
+
+"""
+A constellation in the sky
+"""
+type Constellation {
+  """
+  レコード作成日時
+  """
+  createdAt: DateTime!
+
+  """
+  The ID of the constellation
+  """
+  id: ID!
+
+  """
+  The name of the constellation
+  """
+  name: String!
+
+  """
+  The stars in the constellation
+  """
+  stars: [Star!]!
+
+  """
+  レコード更新日時
+  """
+  updatedAt: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
+"""
+scalar DateTime
+
+"""
+Root Mutation
+"""
+type Mutation {
+  """
+  Broadcast a random number to all subscribers
+  """
+  broadcastRandomNumber: Boolean!
+
+  """
+  Send a date to the server.
+  """
+  sendDate(
+    """
+    The input of the sendDate mutation.
+    """
+    input: SendDateInput!
+  ): SendDatePayload!
+
+  """
+  Send a file to the server.
+  """
+  sendFile(
+    """
+    The input of the sendFile mutation.
+    """
+    input: SendFileInput!
+  ): SendFilePayload!
+}
+
+"""
+Root Query
+"""
+type Query {
+  """
+  Returns a single constellation
+  """
+  constellation(
+    """
+    ID of the constellation
+    """
+    id: ID!
+  ): Constellation!
+
+  """
+  Returns a list of constellations
+  """
+  constellations: [Constellation!]!
+
+  """
+  Get the URL of a file from the server.
+  """
+  fileUrl(
+    """
+    The key of the file.
+    """
+    key: String!
+  ): String!
+
+  """
+  A simple type for getting started!
+  """
+  hello(
+    """
+    Your name, for a friendly greeting!
+    """
+    name: String
+  ): String!
+
+  """
+  List all files in the server.
+  """
+  listFiles: [String!]!
+
+  """
+  Returns a single star
+  """
+  star(
+    """
+    ID of the star
+    """
+    id: ID!
+  ): Star!
+
+  """
+  Returns a list of stars
+  """
+  stars: [Star!]!
+}
+
+"""
+The input of the sendDate mutation.
+"""
+input SendDateInput {
+  """
+  The date to send to the server.
+  """
+  date: DateTime!
+}
+
+"""
+The payload of the sendDate mutation.
+"""
+type SendDatePayload {
+  """
+  The date.
+  """
+  date: DateTime!
+
+  """
+  The global ID of the date.
+  """
+  id: ID!
+}
+
+"""
+The input of the sendFile mutation.
+"""
+input SendFileInput {
+  """
+  The content type of the file.
+  """
+  contentType: String!
+
+  """
+  The file to send to the server.
+  """
+  file: Byte!
+
+  """
+  The name of the file.
+  """
+  name: String!
+}
+
+"""
+The payload of the sendFile mutation.
+"""
+type SendFilePayload {
+  """
+  The global ID of the file.
+  """
+  id: ID!
+
+  """
+  The key of the file.
+  """
+  key: String!
+}
+
+"""
+A star in the sky
+"""
+type Star {
+  """
+  The constellation the star is in
+  """
+  constellation: Constellation!
+
+  """
+  レコード作成日時
+  """
+  createdAt: DateTime!
+
+  """
+  The ID of the star
+  """
+  id: ID!
+
+  """
+  The name of the star
+  """
+  name: String!
+
+  """
+  レコード更新日時
+  """
+  updatedAt: DateTime!
+}
+
+"""
+Root Subscription
+"""
+type Subscription {
+  """
+  A random number subscription
+  """
+  randomNumber: Float!
+}

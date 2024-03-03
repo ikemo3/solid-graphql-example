@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "strict": true,
+    "target": "ES2022",
+    "paths": {
+      "@builder": ["./src/builder"],
+      "@dataAccess/*": ["./src/dataAccess/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@gql": ["./tests/generated/gql"],
+      "@setup": ["./tests/setup"],
+      "@assert": ["./tests/libs/assert"]
+    },
+    "types": ["vitest/globals"]
+  }
+}

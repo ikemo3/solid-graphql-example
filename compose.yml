@@ -1,0 +1,180 @@
+services:
+  database:
+    build:
+      context: database
+    entrypoint: /usr/local/bin/entrypoint.sh
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DATABASE_USER}"]
+      interval: 1s
+      timeout: 1s
+      retries: 10
+    labels:
+      traefik.enable: true
+      traefik.tcp.routers.database.rule: HostSNI(`*`)
+      traefik.tcp.routers.database.entrypoints: postgresql
+      traefik.tcp.routers.database.middlewares: from-home-tcp@docker
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        fluentd-async-connect: "true"
+        tag: ${FLUENTD_TAG_PREFIX}.database
+    volumes:
+      - ./private.key:/etc/server.key
+      - ./fullchain.crt:/etc/server.crt
+  storage:
+    build:
+      context: storage
+    environment:
+      MINIO_ROOT_USER: ${S3_ACCESS_KEY_ID}
+      MINIO_ROOT_PASSWORD: ${S3_SECRET_ACCESS_KEY}
+      MINIO_SERVER_URL: https://${STORAGE_FQDN}
+      MINIO_BROWSER_REDIRECT_URL: https://${STORAGE_ADMIN_FQDN}
+    labels:
+      traefik.enable: true
+      traefik.http.routers.storage.rule: Host(`${STORAGE_FQDN}`)
+      traefik.http.routers.storage.tls: true
+      traefik.http.routers.storage.entrypoints: https
+      traefik.http.routers.storage.service: storage-service
+      traefik.http.services.storage-service.loadbalancer.server.port: 9000
+      traefik.http.routers.storage-admin.rule: Host(`${STORAGE_ADMIN_FQDN}`)
+      traefik.http.routers.storage-admin.tls: true
+      traefik.http.routers.storage-admin.entrypoints: https
+      traefik.http.routers.storage-admin.service: storage-admin-service
+      traefik.http.routers.storage-admin.middlewares: from-home@docker
+      traefik.http.services.storage-admin-service.loadbalancer.server.port: 9001
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        fluentd-async-connect: "true"
+        tag: ${FLUENTD_TAG_PREFIX}.storage
+  pubsub:
+    build:
+      context: pubsub
+    labels:
+      traefik.enable: true
+      traefik.tcp.routers.pubsub.rule: HostSNI(`*`)
+      traefik.tcp.routers.pubsub.entrypoints: redis
+      traefik.tcp.routers.pubsub.middlewares: from-home-tcp@docker
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        fluentd-async-connect: "true"
+        tag: ${FLUENTD_TAG_PREFIX}.pubsub
+  backend:
+    build:
+      context: backend
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgresql://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}:5432/${DATABASE_NAME}
+      FRONTEND_URL: https://${FRONTEND_FQDN}
+      OAUTH2_AUDIENCE: ${OAUTH2_AUDIENCE}
+      OAUTH2_ISSUER_BASE_URL: https://${OAUTH2_ISSUER_FQDN}
+      S3_ENDPOINT: ${S3_ENDPOINT}
+      S3_REGION: ${S3_REGION}
+      S3_ACCESS_KEY_ID: ${S3_ACCESS_KEY_ID}
+      S3_SECRET_ACCESS_KEY: ${S3_SECRET_ACCESS_KEY}
+      S3_PATH_STYLE_ACCESS: ${S3_PATH_STYLE_ACCESS}
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME}
+      PUBSUB_URL: ${PUBSUB_URL}
+    labels:
+      traefik.enable: true
+      traefik.http.routers.backend.rule: Host(`${API_FQDN}`)
+      traefik.http.routers.backend.tls: true
+      traefik.http.routers.backend.entrypoints: https
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        fluentd-async-connect: "true"
+        tag: ${FLUENTD_TAG_PREFIX}.backend
+    develop:
+      watch:
+        - action: sync
+          path: ./backend
+          target: /usr/src/app
+        - action: rebuild
+          path: ./backend/package.json
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    environment:
+      VITE_API_BASE_URL: https://${API_FQDN}
+      VITE_OAUTH2_AUDIENCE: ${OAUTH2_AUDIENCE}
+      VITE_OAUTH2_CLIENT_ID: ${OAUTH2_CLIENT_ID}
+      VITE_AUTH0_DOMAIN: ${OAUTH2_ISSUER_FQDN}
+    labels:
+      traefik.enable: true
+      traefik.http.routers.frontend.rule: Host(`${FRONTEND_FQDN}`)
+      traefik.http.routers.frontend.tls: true
+      traefik.http.routers.frontend.entrypoints: https
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        fluentd-async-connect: "true"
+        tag: ${FLUENTD_TAG_PREFIX}.frontend
+    develop:
+      watch:
+        - action: sync
+          path: ./frontend
+          target: /usr/src/app
+        - action: rebuild
+          path: ./frontend/package.json
+  traefik:
+    build:
+      context: traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.dashboard.rule: Host(`${TRAEFIK_FQDN}`)
+      traefik.http.routers.dashboard.service: api@internal
+      traefik.http.routers.dashboard.tls: true
+      traefik.http.routers.dashboard.entrypoints: https
+      # IP制限を有効化
+      # ミドルウェアを定義
+      traefik.http.middlewares.from-home.ipallowlist.sourcerange: 127.0.0.1/32, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+      traefik.tcp.middlewares.from-home-tcp.ipallowlist.sourcerange: 127.0.0.1/32, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+      # ミドルウェアをルーターに適用
+      traefik.http.routers.dashboard.middlewares: from-home@docker
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        fluentd-async-connect: "true"
+        tag: ${FLUENTD_TAG_PREFIX}.traefik
+    networks:
+      default:
+        aliases:
+          - ${STORAGE_FQDN}
+    ports:
+      - "443:443"
+      - "5432:5432"
+      - "6379:6379"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik/config:/etc/traefik:ro
+      - ./private.key:/etc/cert/private.key:ro
+      - ./fullchain.crt:/etc/cert/fullchain.crt:ro
+  log-router:
+    build:
+      context: log-router
+    environment:
+      - FLUENTD_HOSTNAME=${FLUENTD_HOSTNAME}
+      - FLUENTD_TAG_PREFIX=${FLUENTD_TAG_PREFIX}
+    networks:
+      - default
+    volumes:
+      - ./log-router/fluent.conf:/log-router/etc/fluent.conf
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"

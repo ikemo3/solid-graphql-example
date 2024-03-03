@@ -1,0 +1,66 @@
+- name: docker-compose
+  hosts: all
+
+  tasks:
+    - name: Copy private key
+      copy:
+        src: ../private.key
+        dest: ~/private.key
+        mode: 0640
+
+    - name: Copy fullchain.pem
+      copy:
+        src: ../fullchain.crt
+        dest: ~/fullchain.crt
+        mode: 0640
+
+    - name: Copy traefik directory
+      copy:
+        src: ../traefik/config
+        dest: ~/traefik
+
+    # compose.ymlの存在チェック
+    - name: Check compose.yml file
+      stat:
+        path: ~/compose.yml
+      register: compose_file
+
+    - name: Copy .env file
+      template:
+        src: .env.j2
+        dest: ~/.env
+        mode: 0600
+
+    # compose.ymlがないときは、compose.production.ymlをコピーしておく
+    - name: Copy compose.yml file
+      copy:
+        src: ../compose.production.yml
+        dest: ~/compose.yml
+        mode: 0600
+      when: compose_file.stat.exists == False
+
+    - name: docker compose pull
+      community.docker.docker_compose_v2_pull:
+        project_src: ~/
+
+    - name: docker compose down
+      community.docker.docker_compose_v2:
+        state: stopped
+        project_src: ~/
+
+    - name: Copy compose.yml file
+      copy:
+        src: ../compose.production.yml
+        dest: ~/compose.yml
+
+    - name: docker compose up
+      community.docker.docker_compose_v2:
+        state: present
+        project_src: ~/
+
+    - name: docker compose startを5分ごとにcronで実行
+      cron:
+        name: "docker-compose start"
+        minute: "*/5"
+        job: "docker compose start"
+        state: present

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "rangeStrategy": "bump",
+  "labels": ["dependencies"],
+  "dependencyDashboardApproval": true,
+  "regexManagers": [
+    {
+      "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
+      "matchStrings": [
+        "node-version: \"(?<currentValue>.+)\"",
+        "node-version: (?<currentValue>.+)"
+      ],
+      "depNameTemplate": "node",
+      "lookupNameTemplate": "nodejs/node",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "node"
+    },
+    {
+      "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
+      "matchStrings": [
+        "pnpm-version: \"(?<currentValue>.+)\"",
+        "pnpm-version: (?<currentValue>.+)"
+      ],
+      "depNameTemplate": "pnpm",
+      "datasourceTemplate": "npm"
+    }
+  ]
+}

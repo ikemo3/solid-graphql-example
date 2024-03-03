@@ -1,0 +1,72 @@
+#!/bin/bash
+
+# リポジトリのオーナー
+export OWNER=
+
+# リポジトリ名
+export REPOSITORY_NAME=
+
+# PostgreSQL
+export DATABASE_HOST=
+export DATABASE_NAME=
+export DATABASE_USER=
+export DATABASE_PASSWORD=
+
+## ホスト名
+# API
+export API_FQDN=
+
+# フロントエンド
+export FRONTEND_FQDN=
+
+# storage
+export STORAGE_FQDN=
+
+# storage-admin
+export STORAGE_ADMIN_FQDN=
+
+# pubsub
+export PUBSUB_URL=
+
+# traefik
+export TRAEFIK_FQDN=
+
+# fluentd
+export FLUENTD_HOSTNAME=
+export FLUENTD_TAG_PREFIX=
+
+# Auth0の設定
+export OAUTH2_CLIENT_ID=
+export OAUTH2_AUDIENCE=
+export OAUTH2_ISSUER_FQDN=
+
+# 自宅のIPアドレス
+export MY_HOME_IP=
+
+# サーバ証明書
+export PRIVATE_KEY=
+export WILDCARD_FULLCHAIN=
+
+# backendコンテナから見たS3のエンドポイント
+export S3_ENDPOINT=
+
+# S3のリージョン(Cloudflareの場合はauto、MinIOの場合は何でもいい)
+export S3_REGION=
+
+# S3のアクセスキー
+export S3_ACCESS_KEY_ID=
+
+# S3のシークレットアクセスキー
+export S3_SECRET_ACCESS_KEY=
+
+# MinIOのようにpath style accessを使う場合はtrue
+export S3_PATH_STYLE_ACCESS=
+
+# S3のバケット名
+export S3_BUCKET_NAME=
+
+# 証明書を書き込む
+echo "${PRIVATE_KEY}" > ./private.key
+echo "${WILDCARD_FULLCHAIN}" > ./fullchain.crt
+chmod 0640 ./private.key
+chmod 0640 ./fullchain.crt

@@ -1,0 +1,85 @@
+services:
+  backend:
+    image: ghcr.io/${OWNER}/${REPOSITORY_NAME}-backend:${TAG:-latest}
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgresql://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}:5432/${DATABASE_NAME}
+      FRONTEND_URL: https://${FRONTEND_FQDN}
+      OAUTH2_AUDIENCE: ${OAUTH2_AUDIENCE}
+      OAUTH2_ISSUER_BASE_URL: https://${OAUTH2_ISSUER_FQDN}
+      S3_ENDPOINT: ${S3_ENDPOINT}
+      S3_REGION: ${S3_REGION}
+      S3_ACCESS_KEY_ID: ${S3_ACCESS_KEY_ID}
+      S3_SECRET_ACCESS_KEY: ${S3_SECRET_ACCESS_KEY}
+      S3_PATH_STYLE_ACCESS: ${S3_PATH_STYLE_ACCESS}
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME}
+      PUBSUB_URL: ${PUBSUB_URL}
+    labels:
+      traefik.enable: true
+      traefik.http.routers.backend.rule: Host(`${API_FQDN}`)
+      traefik.http.routers.backend.tls: true
+      traefik.http.routers.backend.entrypoints: https
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        fluentd-async-connect: "true"
+        tag: ${FLUENTD_TAG_PREFIX}.backend
+  frontend:
+    image: ghcr.io/${OWNER}/${REPOSITORY_NAME}-frontend:${TAG:-latest}
+    environment:
+      VITE_API_BASE_URL: https://${API_FQDN}
+      VITE_OAUTH2_AUDIENCE: ${OAUTH2_AUDIENCE}
+      VITE_OAUTH2_CLIENT_ID: ${OAUTH2_CLIENT_ID}
+      VITE_AUTH0_DOMAIN: ${OAUTH2_ISSUER_FQDN}
+    labels:
+      traefik.enable: true
+      traefik.http.routers.frontend.rule: Host(`${FRONTEND_FQDN}`)
+      traefik.http.routers.frontend.tls: true
+      traefik.http.routers.frontend.entrypoints: https
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        fluentd-async-connect: "true"
+        tag: ${FLUENTD_TAG_PREFIX}.frontend
+  traefik:
+    image: ghcr.io/${OWNER}/${REPOSITORY_NAME}-traefik:${TAG:-latest}
+    labels:
+      traefik.enable: true
+      traefik.http.routers.dashboard.rule: Host(`${TRAEFIK_FQDN}`)
+      traefik.http.routers.dashboard.service: api@internal
+      traefik.http.routers.dashboard.tls: true
+      traefik.http.routers.dashboard.entrypoints: https
+      # IP制限を有効化
+      # ミドルウェアを定義
+      traefik.http.middlewares.from-home.ipallowlist.sourcerange: 127.0.0.1/32, ${MY_HOME_IP}/32
+      traefik.tcp.middlewares.from-home-tcp.ipallowlist.sourcerange: 127.0.0.1/32, ${MY_HOME_IP}/32
+      # ミドルウェアをルーターに適用
+      traefik.http.routers.dashboard.middlewares: from-home@docker
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        fluentd-async-connect: "true"
+        tag: ${FLUENTD_TAG_PREFIX}.traefik
+    ports:
+      - "443:443"
+      - "5432:5432"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik/config:/etc/traefik:ro
+      - ./private.key:/etc/cert/private.key:ro
+      - ./fullchain.crt:/etc/cert/fullchain.crt:ro
+  log-router:
+    image: ghcr.io/${OWNER}/${REPOSITORY_NAME}-log-router:${TAG:-latest}
+    environment:
+      - FLUENTD_HOSTNAME=${FLUENTD_HOSTNAME}
+      - FLUENTD_TAG_PREFIX=${FLUENTD_TAG_PREFIX}
+    networks:
+      - default
+    volumes:
+      - ./log-router/fluent.conf:/log-router/etc/fluent.conf
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"

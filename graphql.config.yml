@@ -1,0 +1,2 @@
+# GraphQL LSPが使う設定ファイル
+schema: "./backend/schema.graphql"

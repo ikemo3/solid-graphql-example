@@ -1,0 +1,113 @@
+{
+  "version": "0.2",
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "overrides": [
+    {
+      "filename": "*.code-workspace",
+      "words": [
+        "ahmadalli",
+        "bradlc",
+        "dbaeumer",
+        "esbenp",
+        "unional",
+        "zixuanchen"
+      ]
+    },
+    {
+      "filename": "compose*.yml",
+      "words": ["healthcheck", "ipallowlist", "sourcerange"]
+    },
+    {
+      "filename": "docker-bake.hcl",
+      "words": ["notequal"]
+    },
+    {
+      "filename": "Dockerfile",
+      "words": ["localedef"]
+    },
+    {
+      "filename": ".dependency-cruiser.cjs",
+      "words": [
+        "archi",
+        "fillcolor",
+        "gonal",
+        "graphviz",
+        "jsons",
+        "neighbours",
+        "penwidth"
+      ]
+    },
+    {
+      "filename": "tailwind.config.ts",
+      "words": ["typeography"]
+    },
+    {
+      "filename": "vite.config.ts",
+      "words": ["autoname"]
+    },
+    {
+      "filename": ["build-and-deploy.yml", "build-only.yml", "deploy-only.yml"],
+      "words": ["buildx", "distributhor", "shimataro"]
+    },
+    {
+      "filename": "renovate.json",
+      "words": ["datasourceTemplate"]
+    },
+    {
+      "filename": "schema.prisma",
+      "words": ["autoincrement", "datasource"]
+    },
+    {
+      "filename": "deploy/hosts.py",
+      "words": ["hostvars"]
+    }
+  ],
+  "words": [
+    "clsx",
+    "codegen",
+    "combobox",
+    "corepack",
+    "depcruise",
+    "envrc",
+    "execa",
+    "felte",
+    "filenamify",
+    "fluentd",
+    "fullchain",
+    "generouted",
+    "graphiql",
+    "ikemo",
+    "ikemoto",
+    "hideki",
+    "kobalte",
+    "localstorage",
+    "minio",
+    "ms-azuretools",
+    "octocov",
+    "pg_isready",
+    "pothos",
+    "presigner",
+    "solidjs",
+    "solidui-cli",
+    "tailwindcss",
+    "testcontainers",
+    "testid",
+    "thisbeyond",
+    "traefik",
+    "vite",
+    "workdir"
+  ],
+  "ignorePaths": [
+    "node_modules/",
+    "cspell.json",
+    ".envrc",
+    ".git",
+    ".gitignore",
+    "pnpm-lock.yaml",
+    "*.svg",
+    "backend/prisma/seed.ts",
+    "backend/tests/generated/",
+    "frontend/src/router.ts",
+    "frontend/src/shared/lib/generated/"
+  ]
+}

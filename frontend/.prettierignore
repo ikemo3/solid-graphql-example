@@ -1,0 +1,3 @@
+pnpm-lock.yaml
+src/shared/lib/generated
+src/**/*.d.graphql.ts

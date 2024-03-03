@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider     = "postgresql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+  output   = "./README.md"
+}
+
+generator pothos {
+  provider     = "prisma-pothos-types"
+  clientOutput = "@prisma/client"
+  output       = "./pothos-types.ts"
+}
+
+/// A star in the sky
+model Star {
+  /// The ID of the star
+  id              Int           @id @default(autoincrement())
+  /// The name of the star
+  name            String        @unique @db.VarChar(255)
+  /// The constellation the star is in
+  constellation   Constellation @relation(fields: [constellationId], references: [id])
+  constellationId Int
+  /// レコード作成日時
+  createdAt       DateTime      @default(now())
+  /// レコード更新日時
+  updatedAt       DateTime      @updatedAt
+
+  @@index([constellationId])
+}
+
+/// A constellation in the sky
+model Constellation {
+  /// The ID of the constellation
+  id        Int      @id @default(autoincrement())
+  /// The name of the constellation
+  name      String   @unique @db.VarChar(255)
+  /// レコード作成日時
+  createdAt DateTime @default(now())
+  /// レコード更新日時
+  updatedAt DateTime @updatedAt
+  /// The stars in the constellation
+  stars     Star[]
+}

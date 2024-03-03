@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# リポジトリのオーナー
+export OWNER=
+
+# リポジトリ名
+export REPOSITORY_NAME=
+
+# デプロイするタグ
+export TAG=
+
+# PostgreSQL
+export DATABASE_HOST=
+export DATABASE_NAME=
+export DATABASE_USER=
+export DATABASE_PASSWORD=
+
+# Ansible
+export ANSIBLE_HOST=
+export ANSIBLE_USER=
+
+## ホスト名
+# API
+export API_FQDN=
+
+# フロントエンド
+export FRONTEND_FQDN=
+
+# traefik
+export TRAEFIK_FQDN=
+
+# fluentd
+export FLUENTD_HOSTNAME=
+export FLUENTD_TAG_PREFIX=
+
+# Auth0の設定
+export OAUTH2_CLIENT_ID=
+export OAUTH2_AUDIENCE=
+export OAUTH2_ISSUER_FQDN=
+
+# S3の設定
+export S3_ENDPOINT=
+export S3_REGION=
+export S3_ACCESS_KEY_ID=
+export S3_SECRET_ACCESS_KEY=
+export S3_PATH_STYLE_ACCESS=
+export S3_BUCKET_NAME=
+
+# PubSubの設定
+export PUBSUB_URL=
+
+# 自宅のIPアドレス
+export MY_HOME_IP=
+
+# サーバ証明書
+export PRIVATE_KEY=
+export CERTIFICATE=
+
+# 証明書を書き込む
+echo "${PRIVATE_KEY}" > ../private.key
+echo "${CERTIFICATE}" > ../fullchain.crt

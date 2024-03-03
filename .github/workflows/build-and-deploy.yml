@@ -1,0 +1,117 @@
+name: Deploy(build-and-deploy)
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - id: repository
+        name: Get repository name
+        run: echo "name=${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}" >> $GITHUB_OUTPUT
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload to GitHub Packages
+        uses: docker/bake-action@v4
+        env:
+          OWNER: ${{ github.repository_owner }}
+          REPOSITORY_NAME: ${{ steps.repository.outputs.name }}
+          API_FQDN: ${{ vars.API_FQDN }}
+          OAUTH2_AUDIENCE: ${{ vars.OAUTH2_AUDIENCE }}
+          OAUTH2_CLIENT_ID: ${{ vars.OAUTH2_CLIENT_ID }}
+          OAUTH2_ISSUER_FQDN: ${{ vars.OAUTH2_ISSUER_FQDN }}
+          TAG: ${{ github.ref_name }}
+        with:
+          push: true
+          files: docker-bake.hcl
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - id: repository
+        name: Get repository name
+        run: echo "name=${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}" >> $GITHUB_OUTPUT
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          name: id_ed25519
+          known_hosts: ${{ vars.KNOWN_HOSTS }}
+          if_key_exists: fail
+
+      - name: Deploy
+        env:
+          OWNER: ${{ github.repository_owner }}
+          REPOSITORY_NAME: ${{ steps.repository.outputs.name }}
+          TAG: latest
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          CERTIFICATE: ${{ secrets.CERTIFICATE }}
+          DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
+          DATABASE_NAME: ${{ vars.DATABASE_NAME }}
+          DATABASE_USER: ${{ secrets.DATABASE_USER }}
+          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+          API_FQDN: ${{ vars.API_FQDN }}
+          FRONTEND_FQDN: ${{ vars.FRONTEND_FQDN }}
+          TRAEFIK_FQDN: ${{ vars.TRAEFIK_FQDN }}
+          OAUTH2_CLIENT_ID: ${{ vars.OAUTH2_CLIENT_ID }}
+          OAUTH2_AUDIENCE: ${{ vars.OAUTH2_AUDIENCE }}
+          OAUTH2_ISSUER_FQDN: ${{ vars.OAUTH2_ISSUER_FQDN }}
+          S3_ENDPOINT: ${{ secrets.S3_ENDPOINT }}
+          S3_REGION: ${{ vars.S3_REGION }}
+          S3_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
+          S3_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS_KEY }}
+          S3_PATH_STYLE_ACCESS: ${{ vars.S3_PATH_STYLE_ACCESS }}
+          S3_BUCKET_NAME: ${{ vars.S3_BUCKET_NAME }}
+          PUBSUB_URL: ${{ secrets.PUBSUB_URL }}
+          MY_HOME_IP: ${{ vars.MY_HOME_IP }}
+          ANSIBLE_HOST: ${{ vars.ANSIBLE_HOST }}
+          ANSIBLE_USER: ${{ vars.ANSIBLE_USER }}
+          FLUENTD_HOSTNAME: ${{ vars.FLUENTD_HOSTNAME }}
+          FLUENTD_TAG_PREFIX: ${{ vars.FLUENTD_TAG_PREFIX }}
+        run: |
+          echo -n "$PRIVATE_KEY" > private.key
+          echo -n "$CERTIFICATE" > fullchain.crt
+          make deploy
+
+      - name: Notify
+        uses: distributhor/workflow-webhook@v3
+        with:
+          webhook_url: ${{ vars.DEPLOY_NOTIFICATION_URL }}

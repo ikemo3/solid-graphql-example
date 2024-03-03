@@ -1,0 +1,40 @@
+# ベースイメージをビルド段階で使用
+FROM node:21.6-slim AS builder
+
+# 作業ディレクトリを設定
+WORKDIR /usr/src/app
+
+# OpenSSLのインストール
+RUN apt-get update -y && apt-get install -y openssl
+
+# pnpmを有効にして依存関係をインストール
+COPY package.json pnpm-lock.yaml ./
+RUN corepack enable pnpm && pnpm install --prod
+
+# アプリケーションのソースコードをコピー
+COPY . .
+
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+
+# Prismaクライアントの生成
+RUN prisma generate --generator client
+
+# 本番用のベースイメージを使用
+FROM node:21.6-slim
+
+# 作業ディレクトリを設定
+WORKDIR /usr/src/app
+
+# ビルド段階での/appの内容をコピー
+COPY --from=builder /usr/src/app .
+
+# OpenSSLをインストールし、後処理を行う
+RUN apt-get update -y && apt-get install -y openssl && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+
+# コンテナがリッスンするポートを指定
+EXPOSE 3000
+
+# コンテナ起動時に実行されるスクリプトを設定
+ENTRYPOINT ["./docker/entrypoint-development.sh"]
