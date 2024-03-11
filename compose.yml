@@ -75,6 +75,7 @@ services:
         condition: service_healthy
     environment:
       NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"
       DATABASE_URL: postgresql://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}:5432/${DATABASE_NAME}
       FRONTEND_URL: https://${FRONTEND_FQDN}
       OAUTH2_AUDIENCE: ${OAUTH2_AUDIENCE}
@@ -109,6 +110,7 @@ services:
       context: frontend
       dockerfile: Dockerfile
     environment:
+      CHOKIDAR_USEPOLLING: "true"
       VITE_API_BASE_URL: https://${API_FQDN}
       VITE_OAUTH2_AUDIENCE: ${OAUTH2_AUDIENCE}
       VITE_OAUTH2_CLIENT_ID: ${OAUTH2_CLIENT_ID}

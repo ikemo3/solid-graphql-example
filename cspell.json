@@ -63,6 +63,7 @@
     }
   ],
   "words": [
+    "chokidar",
     "clsx",
     "codegen",
     "combobox",
@@ -94,6 +95,7 @@
     "testid",
     "thisbeyond",
     "traefik",
+    "usepolling",
     "vite",
     "workdir"
   ],
