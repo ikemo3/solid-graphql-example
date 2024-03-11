@@ -9,6 +9,7 @@
     "format:prettier": "prettier --write .",
     "format:sort-package-json": "sort-package-json",
     "lint": "run-s lint:*",
+    "lint:eslint": "eslint . --ext .js --ext .ts --ext .tsx --ext .jsx --ext .cjs",
     "lint:prettier": "prettier --check .",
     "lint:sort-package-json": "sort-package-json --check"
   },
@@ -18,6 +19,9 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "eslint": "^8.57.0",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.2.5",
     "sort-package-json": "^2.8.0",
