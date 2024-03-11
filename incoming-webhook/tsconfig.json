@@ -4,6 +4,6 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "strict": true,
-    "types": ["node"]
+    "types": ["vitest/globals", "node"]
   }
 }
