@@ -7,7 +7,7 @@ import {
 
 async function main() {
   const s3Config = initS3Client(process.env);
-  const bucketName = "test-bucket";
+  const bucketName = process.env.S3_BUCKET_NAME;
   const s3Context = { ...s3Config, bucketName };
 
   await createBucketIfNeeded(s3Context);
