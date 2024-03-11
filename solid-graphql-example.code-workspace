@@ -20,6 +20,9 @@
       "path": "frontend",
     },
     {
+      "path": "incoming-webhook",
+    },
+    {
       "path": "traefik",
     },
     {
@@ -39,6 +42,7 @@
       "pubsub": true,
       "backend": true,
       "frontend": true,
+      "incoming-webhook": true,
       "deploy": true,
       "traefik": true,
       "log-router": true,
