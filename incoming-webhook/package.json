@@ -6,7 +6,10 @@
   "scripts": {
     "format": "run-s format:*",
     "format:prettier": "prettier --write .",
-    "format:sort-package-json": "sort-package-json"
+    "format:sort-package-json": "sort-package-json",
+    "lint": "run-s lint:*",
+    "lint:prettier": "prettier --check .",
+    "lint:sort-package-json": "sort-package-json --check"
   },
   "devDependencies": {
     "npm-run-all2": "^6.1.2",
