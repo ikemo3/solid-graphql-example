@@ -1,0 +1,7 @@
+{
+  "name": "solid-graphql-example-incoming-webhook",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@8.15.4"
+}
