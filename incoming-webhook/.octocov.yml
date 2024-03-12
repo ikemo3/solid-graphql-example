@@ -1,0 +1,19 @@
+repository: ikemo3/solid-graphql-example/incoming-webhook
+coverage:
+  if: true
+  paths:
+    - coverage/clover.xml
+testExecutionTime:
+  if: true
+diff:
+  datastores:
+    - artifact://${GITHUB_REPOSITORY}
+comment:
+  if: is_pull_request
+  deletePrevious: true
+summary:
+  if: true
+report:
+  if: is_default_branch
+  datastores:
+    - artifact://${GITHUB_REPOSITORY}
