@@ -1,0 +1,60 @@
+name: "Continuous Integration(incoming-webhook)"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "incoming-webhook/**"
+      - ".github/workflows/*-incoming-webhook.yml"
+  pull_request:
+    paths:
+      - "incoming-webhook/**"
+      - ".github/workflows/*-incoming-webhook.yml"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+  actions: read
+
+defaults:
+  run:
+    working-directory: incoming-webhook
+
+env:
+  node-version: "21.6.2"
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: use pnpm
+        uses: pnpm/action-setup@v3.0.0
+        with:
+          package_json_file: "incoming-webhook/package.json"
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.node-version }}
+
+      - name: Install dependencies
+        run: make install-deps
+
+      - name: Run lint
+        run: make lint
+
+      # octocovでテストの実行時間が正しく出るように、テストのみ実行
+      - name: Run test
+        run: make test
+
+      - uses: k1LoW/octocov-action@v1
+        with:
+          config: incoming-webhook/.octocov.yml
