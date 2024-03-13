@@ -26,6 +26,9 @@ export API_FQDN=
 # フロントエンド
 export FRONTEND_FQDN=
 
+# incoming-webhook
+export INCOMING_WEBHOOK_FQDN=
+
 # traefik
 export TRAEFIK_FQDN=
 
