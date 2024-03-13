@@ -31,7 +31,7 @@ variable "OAUTH2_ISSUER_FQDN" {
 }
 
 group "default" {
-  targets = ["database", "storage", "pubsub", "backend", "frontend", "traefik", "log-router"]
+  targets = ["database", "storage", "pubsub", "backend", "frontend", "incoming-webhook", "traefik", "log-router"]
 }
 
 function "latest_tag_name" {
@@ -86,6 +86,12 @@ target "frontend" {
     "VITE_OAUTH2_CLIENT_ID" = "${OAUTH2_CLIENT_ID}"
     "VITE_AUTH0_DOMAIN"     = "${OAUTH2_ISSUER_FQDN}"
   }
+}
+
+target "incoming-webhook" {
+  context    = "incoming-webhook"
+  dockerfile = "Dockerfile.production"
+  tags       = tags("incoming-webhook", TAG)
 }
 
 target "traefik" {
