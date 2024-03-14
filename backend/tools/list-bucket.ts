@@ -11,5 +11,5 @@ async function main(bucketName: string) {
   }
 }
 
-const bucketName = process.env.S3_BUCKET_NAME + "a";
+const bucketName = process.env.S3_BUCKET_NAME;
 await main(bucketName);
