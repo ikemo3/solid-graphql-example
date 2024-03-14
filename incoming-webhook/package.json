@@ -6,6 +6,8 @@
   "scripts": {
     "coverage": "vitest --coverage",
     "dev": "tsx watch src/index.ts",
+    "fix": "run-s fix:*",
+    "fix:eslint": "eslint . --ext .js --ext .ts --ext .tsx --ext .jsx --ext .cjs --fix",
     "format": "run-s format:*",
     "format:prettier": "prettier --write .",
     "format:sort-package-json": "sort-package-json",
