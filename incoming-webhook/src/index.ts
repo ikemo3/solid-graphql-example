@@ -1,7 +1,7 @@
 import { serve } from "@hono/node-server";
+import { zValidator } from "@hono/zod-validator";
 import { Hono } from "hono";
 import { z } from "zod";
-import { zValidator } from "@hono/zod-validator";
 
 // リクエストボディのスキーマを定義
 const schema = z.object({
