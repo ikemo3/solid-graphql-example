@@ -29,6 +29,9 @@ export FRONTEND_FQDN=
 # incoming-webhook
 export INCOMING_WEBHOOK_FQDN=
 
+# incoming-webhookのパス(例: XABCD1234、スラッシュは含まない)
+export INCOMING_WEBHOOK_PATH=
+
 # traefik
 export TRAEFIK_FQDN=
 
