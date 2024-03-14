@@ -138,6 +138,7 @@ services:
       context: incoming-webhook
     environment:
       CHOKIDAR_USEPOLLING: "true"
+      INCOMING_WEBHOOK_PATH: ${INCOMING_WEBHOOK_PATH}
     labels:
       traefik.enable: true
       traefik.http.routers.incoming-webhook.rule: Host(`${INCOMING_WEBHOOK_FQDN}`)

@@ -98,7 +98,8 @@
     "traefik",
     "usepolling",
     "vite",
-    "workdir"
+    "workdir",
+    "xabcd"
   ],
   "ignorePaths": [
     "node_modules/",
