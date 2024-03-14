@@ -43,6 +43,19 @@ services:
         fluentd-address: localhost:24224
         fluentd-async-connect: "true"
         tag: ${FLUENTD_TAG_PREFIX}.frontend
+  incoming-webhook:
+    image: ghcr.io/${OWNER}/${REPOSITORY_NAME}-incoming-webhook:${TAG:-latest}
+    labels:
+      traefik.enable: true
+      traefik.http.routers.incoming-webhook.rule: Host(`${INCOMING_WEBHOOK_FQDN}`)
+      traefik.http.routers.incoming-webhook.tls: true
+      traefik.http.routers.incoming-webhook.entrypoints: https
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        fluentd-async-connect: "true"
+        tag: ${FLUENTD_TAG_PREFIX}.incoming-webhook
   traefik:
     image: ghcr.io/${OWNER}/${REPOSITORY_NAME}-traefik:${TAG:-latest}
     labels:

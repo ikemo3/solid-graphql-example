@@ -133,6 +133,29 @@ services:
           target: /usr/src/app
         - action: rebuild
           path: ./frontend/package.json
+  incoming-webhook:
+    build:
+      context: incoming-webhook
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+    labels:
+      traefik.enable: true
+      traefik.http.routers.incoming-webhook.rule: Host(`${INCOMING_WEBHOOK_FQDN}`)
+      traefik.http.routers.incoming-webhook.tls: true
+      traefik.http.routers.incoming-webhook.entrypoints: https
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        fluentd-async-connect: "true"
+        tag: ${FLUENTD_TAG_PREFIX}.incoming-webhook
+    develop:
+      watch:
+        - action: sync
+          path: ./incoming-webhook
+          target: /usr/src/app
+        - action: rebuild
+          path: ./incoming-webhook/package.json
   traefik:
     build:
       context: traefik

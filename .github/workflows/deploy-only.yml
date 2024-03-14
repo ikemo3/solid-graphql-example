@@ -63,6 +63,7 @@ jobs:
           DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
           API_FQDN: ${{ vars.API_FQDN }}
           FRONTEND_FQDN: ${{ vars.FRONTEND_FQDN }}
+          INCOMING_WEBHOOK_FQDN: ${{ vars.INCOMING_WEBHOOK_FQDN }}
           TRAEFIK_FQDN: ${{ vars.TRAEFIK_FQDN }}
           OAUTH2_CLIENT_ID: ${{ vars.OAUTH2_CLIENT_ID }}
           OAUTH2_AUDIENCE: ${{ vars.OAUTH2_AUDIENCE }}

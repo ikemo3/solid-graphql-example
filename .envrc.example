@@ -28,6 +28,9 @@ export STORAGE_ADMIN_FQDN=
 # pubsub
 export PUBSUB_URL=
 
+# incoming-webhook
+export INCOMING_WEBHOOK_FQDN=
+
 # traefik
 export TRAEFIK_FQDN=
 
