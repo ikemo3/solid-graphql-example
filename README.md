@@ -3,6 +3,7 @@
 [![ROOT](../../actions/workflows/ci-root.yml/badge.svg)](../../actions/workflows/ci-root.yml)
 [![backend](../../actions/workflows/ci-backend.yml/badge.svg)](../../actions/workflows/ci-backend.yml)
 [![frontend](../../actions/workflows/ci-frontend.yml/badge.svg)](../../actions/workflows/ci-frontend.yml)
+[![incoming webhook](../../actions/workflows/ci-incoming-webhook.yml/badge.svg)](../../actions/workflows/ci-incoming-webhook.yml)
 
 ## 技術スタック
 
@@ -18,6 +19,9 @@
 - Pub/Sub
   - [Redis](https://redis.io/): メッセージブローカー
   - [ioredis](https://github.com/redis/ioredis): Redisクライアント
+- Incoming Webhook
+  - [Hono](https://hono.dev/): フレームワーク
+  - [zod](https://zod.dev/): バリデーション
 - バックエンド
   - [TypeScript](https://www.typescriptlang.org/): バックエンド言語
   - [pnpm](https://pnpm.io/): パッケージマネージャ
