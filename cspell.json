@@ -69,6 +69,7 @@
     "combobox",
     "corepack",
     "depcruise",
+    "dockerode",
     "envrc",
     "execa",
     "felte",
