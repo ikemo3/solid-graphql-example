@@ -47,6 +47,7 @@ services:
     image: ghcr.io/${OWNER}/${REPOSITORY_NAME}-incoming-webhook:${TAG:-latest}
     environment:
       INCOMING_WEBHOOK_PATH: ${INCOMING_WEBHOOK_PATH}
+      PROJECT_NAME: ${REPOSITORY_NAME}
     labels:
       traefik.enable: true
       traefik.http.routers.incoming-webhook.rule: Host(`${INCOMING_WEBHOOK_FQDN}`)
@@ -58,6 +59,8 @@ services:
         fluentd-address: localhost:24224
         fluentd-async-connect: "true"
         tag: ${FLUENTD_TAG_PREFIX}.incoming-webhook
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
   traefik:
     image: ghcr.io/${OWNER}/${REPOSITORY_NAME}-traefik:${TAG:-latest}
     labels:
