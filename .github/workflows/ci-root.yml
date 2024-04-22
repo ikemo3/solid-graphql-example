@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  node-version: "21.6.2"
+  node-version: "20.12.2"
   pnpm-version: "8.15.4"
 
 jobs:
