@@ -74,7 +74,7 @@
     "jsdom": "^24.0.0",
     "nginx-linter": "^0.6.3",
     "npm-run-all2": "^6.1.2",
-    "postcss": "^8.4.35",
+    "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "remark-emoji": "^4.0.1",
     "solid-devtools": "^0.29.3",
