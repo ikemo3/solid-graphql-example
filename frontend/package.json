@@ -37,7 +37,7 @@
     "@graphql-typed-document-node/core": "^3.2.0",
     "@kobalte/core": "^0.12.1",
     "@mdx-js/rollup": "^3.0.1",
-    "@solid-primitives/clipboard": "^1.5.9",
+    "@solid-primitives/clipboard": "^1.5.10",
     "@solidjs/meta": "^0.29.3",
     "@solidjs/router": "^0.12.4",
     "@tanker/file-reader": "^4.1.1",
