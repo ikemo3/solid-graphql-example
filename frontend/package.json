@@ -43,7 +43,7 @@
     "@tanker/file-reader": "^4.1.1",
     "@thisbeyond/solid-dnd": "^0.7.5",
     "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
+    "clsx": "^2.1.1",
     "date-fns": "^3.3.1",
     "graphql": "^16.8.1",
     "graphql-sse": "^2.5.2",
