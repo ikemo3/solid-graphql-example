@@ -21,17 +21,17 @@ dependencies:
     specifier: ^3.0.0
     version: 3.0.0(ioredis@5.3.2)
   '@pothos/core':
-    specifier: ^3.41.0
-    version: 3.41.0(graphql@16.8.1)
+    specifier: ^3.41.1
+    version: 3.41.1(graphql@16.8.1)
   '@pothos/plugin-prisma':
     specifier: ^3.64.0
-    version: 3.64.0(@pothos/core@3.41.0)(@prisma/client@5.10.2)(graphql@16.8.1)(typescript@5.4.5)
+    version: 3.64.0(@pothos/core@3.41.1)(@prisma/client@5.10.2)(graphql@16.8.1)(typescript@5.4.5)
   '@pothos/plugin-relay':
     specifier: ^3.46.0
-    version: 3.46.0(@pothos/core@3.41.0)(graphql@16.8.1)
+    version: 3.46.0(@pothos/core@3.41.1)(graphql@16.8.1)
   '@pothos/plugin-scope-auth':
     specifier: ^3.21.1
-    version: 3.21.1(@pothos/core@3.41.0)(graphql@16.8.1)
+    version: 3.21.1(@pothos/core@3.41.1)(graphql@16.8.1)
   '@prisma/client':
     specifier: ^5.10.2
     version: 5.10.2(prisma@5.10.2)
@@ -3194,15 +3194,15 @@ packages:
       webcrypto-core: 1.7.8
     dev: true
 
-  /@pothos/core@3.41.0(graphql@16.8.1):
-    resolution: {integrity: sha512-Nb7uPDTXVjdrWqHs5aoD1r6JEdQ9FnJYlf7gv47o1b/bb8rVDAZQaviVvaChal7YQcyFGgCFb0/YNNHLNBEjNw==}
+  /@pothos/core@3.41.1(graphql@16.8.1):
+    resolution: {integrity: sha512-K+TGTK2Q7rmLU9WaC1cSDiGZaU9M+gHNbCYBom2W1vHuEYDUAiihVHz9tXYsrYjFMJSK+wLJ7Xp2374bQa9x/w==}
     peerDependencies:
       graphql: '>=15.1.0'
     dependencies:
       graphql: 16.8.1
     dev: false
 
-  /@pothos/plugin-prisma@3.64.0(@pothos/core@3.41.0)(@prisma/client@5.10.2)(graphql@16.8.1)(typescript@5.4.5):
+  /@pothos/plugin-prisma@3.64.0(@pothos/core@3.41.1)(@prisma/client@5.10.2)(graphql@16.8.1)(typescript@5.4.5):
     resolution: {integrity: sha512-UFQ0KSX3KM6iVJ9V0ow5gfIdMdbf+LXbs7r8rUjGQbHpVwshXAOYexVeLoZv4H6/21pPIHImYk1FhknXUDHiTA==}
     hasBin: true
     peerDependencies:
@@ -3211,30 +3211,30 @@ packages:
       graphql: '>=15.1.0'
       typescript: '>=4.7.2'
     dependencies:
-      '@pothos/core': 3.41.0(graphql@16.8.1)
+      '@pothos/core': 3.41.1(graphql@16.8.1)
       '@prisma/client': 5.10.2(prisma@5.10.2)
       '@prisma/generator-helper': 5.8.1
       graphql: 16.8.1
       typescript: 5.4.5
     dev: false
 
-  /@pothos/plugin-relay@3.46.0(@pothos/core@3.41.0)(graphql@16.8.1):
+  /@pothos/plugin-relay@3.46.0(@pothos/core@3.41.1)(graphql@16.8.1):
     resolution: {integrity: sha512-EOmyqAsMy/vWgitPWcQRDUvLBcZF5M/RrFxoFeI/VWnRpUJPr8XmHh28jb70G8Wzfg56btPpTY440doSKb60og==}
     peerDependencies:
       '@pothos/core': '*'
       graphql: '>=15.1.0'
     dependencies:
-      '@pothos/core': 3.41.0(graphql@16.8.1)
+      '@pothos/core': 3.41.1(graphql@16.8.1)
       graphql: 16.8.1
     dev: false
 
-  /@pothos/plugin-scope-auth@3.21.1(@pothos/core@3.41.0)(graphql@16.8.1):
+  /@pothos/plugin-scope-auth@3.21.1(@pothos/core@3.41.1)(graphql@16.8.1):
     resolution: {integrity: sha512-YWmiQz4NbtTkrWZ/uJIKEA8roa8ndQbb4UY1Eo+5ADJQ3BG0+f8oJgKqRAPmN1vYqMAjNf9neP0sC5sZBvf9Qg==}
     peerDependencies:
       '@pothos/core': '*'
       graphql: '>=15.1.0'
     dependencies:
-      '@pothos/core': 3.41.0(graphql@16.8.1)
+      '@pothos/core': 3.41.1(graphql@16.8.1)
       graphql: 16.8.1
     dev: false
 
