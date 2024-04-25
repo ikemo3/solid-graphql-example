@@ -23,7 +23,7 @@
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.2.5",
     "sort-package-json": "^2.8.0",
-    "tsx": "^4.7.2",
+    "tsx": "^4.7.3",
     "yaml": "^2.4.1"
   },
   "packageManager": "pnpm@8.15.7"
