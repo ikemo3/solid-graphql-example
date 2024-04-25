@@ -27,8 +27,8 @@ dependencies:
     specifier: ^3.0.1
     version: 3.0.1(rollup@4.14.0)
   '@solid-primitives/clipboard':
-    specifier: ^1.5.9
-    version: 1.5.9(solid-js@1.8.15)
+    specifier: ^1.5.10
+    version: 1.5.10(solid-js@1.8.15)
   '@solidjs/meta':
     specifier: ^0.29.3
     version: 0.29.3(solid-js@1.8.15)
@@ -2063,7 +2063,7 @@ packages:
       '@solid-primitives/rootless': 1.4.2(solid-js@1.8.15)
       '@solid-primitives/scheduled': 1.4.2(solid-js@1.8.15)
       '@solid-primitives/static-store': 0.0.5(solid-js@1.8.15)
-      '@solid-primitives/utils': 6.2.2(solid-js@1.8.15)
+      '@solid-primitives/utils': 6.2.3(solid-js@1.8.15)
       solid-js: 1.8.15
     dev: true
 
@@ -2080,7 +2080,7 @@ packages:
       '@solid-primitives/scheduled': 1.4.2(solid-js@1.8.15)
       '@solid-primitives/static-store': 0.0.5(solid-js@1.8.15)
       '@solid-primitives/styles': 0.0.111(solid-js@1.8.15)
-      '@solid-primitives/utils': 6.2.2(solid-js@1.8.15)
+      '@solid-primitives/utils': 6.2.3(solid-js@1.8.15)
       solid-js: 1.8.15
     dev: true
 
@@ -2096,8 +2096,8 @@ packages:
       solid-js: 1.8.15
     dev: true
 
-  /@solid-primitives/clipboard@1.5.9(solid-js@1.8.15):
-    resolution: {integrity: sha512-fPfxsw2vcyqP8X9h2Ngf8E3qVq/Hccmgr/GnAZ+2UEdrkNE0AS/HvvT/5mIyg8pg/DYjTCe5aMn9p7ok89MU8w==}
+  /@solid-primitives/clipboard@1.5.10(solid-js@1.8.15):
+    resolution: {integrity: sha512-ohwlrBP4j+Qjksg01CFWaP/USpzX78dBNVA1DPRZkf/vJgytX0T6KMc2YxF6o8fs6ePIYSI8Nt3sKxF0sh1q+Q==}
     peerDependencies:
       solid-js: ^1.6.12
     dependencies:
@@ -2175,7 +2175,7 @@ packages:
       '@solid-primitives/event-listener': 2.3.0(solid-js@1.8.15)
       '@solid-primitives/rootless': 1.4.2(solid-js@1.8.15)
       '@solid-primitives/static-store': 0.0.5(solid-js@1.8.15)
-      '@solid-primitives/utils': 6.2.2(solid-js@1.8.15)
+      '@solid-primitives/utils': 6.2.3(solid-js@1.8.15)
       solid-js: 1.8.15
 
   /@solid-primitives/platform@0.1.1(solid-js@1.8.15):
@@ -2200,7 +2200,7 @@ packages:
     peerDependencies:
       solid-js: ^1.6.12
     dependencies:
-      '@solid-primitives/utils': 6.2.2(solid-js@1.8.15)
+      '@solid-primitives/utils': 6.2.3(solid-js@1.8.15)
       solid-js: 1.8.15
 
   /@solid-primitives/resize-observer@2.0.23(solid-js@1.8.15):
@@ -2263,7 +2263,7 @@ packages:
       solid-js: ^1.6.12
     dependencies:
       '@solid-primitives/rootless': 1.4.2(solid-js@1.8.15)
-      '@solid-primitives/utils': 6.2.2(solid-js@1.8.15)
+      '@solid-primitives/utils': 6.2.3(solid-js@1.8.15)
       solid-js: 1.8.15
     dev: true
 
@@ -2275,13 +2275,6 @@ packages:
       '@solid-primitives/utils': 6.2.3(solid-js@1.8.15)
       solid-js: 1.8.15
     dev: false
-
-  /@solid-primitives/utils@6.2.2(solid-js@1.8.15):
-    resolution: {integrity: sha512-11ypVbp987XxETeRqY5Y3OmmTpm8/jZqJXRvo6AyqBthzkvvjEdReuUMU2yVb+pwWGxfZpWHZ6EUCcGXUMhfwg==}
-    peerDependencies:
-      solid-js: ^1.6.12
-    dependencies:
-      solid-js: 1.8.15
 
   /@solid-primitives/utils@6.2.3(solid-js@1.8.15):
     resolution: {integrity: sha512-CqAwKb2T5Vi72+rhebSsqNZ9o67buYRdEJrIFzRXz3U59QqezuuxPsyzTSVCacwS5Pf109VRsgCJQoxKRoECZQ==}
