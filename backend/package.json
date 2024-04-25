@@ -33,7 +33,7 @@
     "@pothos/plugin-prisma": "^3.64.0",
     "@pothos/plugin-relay": "^3.46.0",
     "@pothos/plugin-scope-auth": "^3.21.1",
-    "@prisma/client": "^5.10.2",
+    "@prisma/client": "^5.13.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "express-oauth2-jwt-bearer": "^1.6.0",
@@ -43,7 +43,7 @@
     "graphql-yoga": "^5.1.1",
     "helmet": "^7.1.0",
     "ioredis": "^5.3.2",
-    "prisma": "^5.10.2",
+    "prisma": "^5.13.0",
     "tsx": "^4.7.3"
   },
   "devDependencies": {
