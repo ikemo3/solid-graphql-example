@@ -19,7 +19,7 @@ dependencies:
     version: 2.1.1(graphql-yoga@5.1.1)(graphql@16.8.1)
   '@graphql-yoga/redis-event-target':
     specifier: ^3.0.0
-    version: 3.0.0(ioredis@5.3.2)
+    version: 3.0.0(ioredis@5.4.1)
   '@pothos/core':
     specifier: ^3.41.1
     version: 3.41.1(graphql@16.8.1)
@@ -60,8 +60,8 @@ dependencies:
     specifier: ^7.1.0
     version: 7.1.0
   ioredis:
-    specifier: ^5.3.2
-    version: 5.3.2
+    specifier: ^5.4.1
+    version: 5.4.1
   prisma:
     specifier: ^5.13.0
     version: 5.13.0
@@ -3007,7 +3007,7 @@ packages:
       graphql-yoga: 5.1.1(graphql@16.8.1)
     dev: false
 
-  /@graphql-yoga/redis-event-target@3.0.0(ioredis@5.3.2):
+  /@graphql-yoga/redis-event-target@3.0.0(ioredis@5.4.1):
     resolution: {integrity: sha512-oh5DXd2QLmgD6FazoGMkp1k+l21450sgdPt90Hzjlsz0Us+2gymwlLBlEkiZvHpszrR1463Nw4XMQot/dVwI9Q==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
@@ -3015,7 +3015,7 @@ packages:
     dependencies:
       '@graphql-yoga/typed-event-target': 3.0.0
       '@whatwg-node/events': 0.1.1
-      ioredis: 5.3.2
+      ioredis: 5.4.1
     dev: false
 
   /@graphql-yoga/subscription@5.0.0:
@@ -6342,8 +6342,8 @@ packages:
       loose-envify: 1.4.0
     dev: true
 
-  /ioredis@5.3.2:
-    resolution: {integrity: sha512-1DKMMzlIHM02eBBVOFQ1+AolGjs6+xEcM4PDL7NqOS6szq7H9jSaEkIUH6/a5Hl241LzW6JLSiAbNvTQjUupUA==}
+  /ioredis@5.4.1:
+    resolution: {integrity: sha512-2YZsvl7jopIa1gaePkeMtd9rAcSjOOjPtpcLlOeusyO+XH2SK5ZcT+UCrElPP+WVIInh2TzeI4XW9ENaSLVVHA==}
     engines: {node: '>=12.22.0'}
     dependencies:
       '@ioredis/commands': 1.2.0
