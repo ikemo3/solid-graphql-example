@@ -46,7 +46,7 @@
     "clsx": "^2.1.1",
     "date-fns": "^3.3.1",
     "graphql": "^16.8.1",
-    "graphql-sse": "^2.5.2",
+    "graphql-sse": "^2.5.3",
     "i18next": "^23.10.0",
     "initials": "^3.1.2",
     "solid-icons": "^1.1.0",
