@@ -146,8 +146,8 @@ devDependencies:
     specifier: ^2.10.0
     version: 2.10.0
   testcontainers:
-    specifier: ^10.7.1
-    version: 10.7.1
+    specifier: ^10.9.0
+    version: 10.9.0
   typescript:
     specifier: ^5.4.5
     version: 5.4.5
@@ -3920,11 +3920,12 @@ packages:
       '@types/ssh2': 1.11.19
     dev: true
 
-  /@types/dockerode@3.3.23:
-    resolution: {integrity: sha512-Lz5J+NFgZS4cEVhquwjIGH4oQwlVn2h7LXD3boitujBnzOE5o7s9H8hchEjoDK2SlRsJTogdKnQeiJgPPKLIEw==}
+  /@types/dockerode@3.3.28:
+    resolution: {integrity: sha512-RjY96chW88t2QvSebCsec+mQYo3/nyOr+/tVcE+0ynlOg2m/i9wPE52DhptzF75QDlhv2uDYVPqKfHKeGTn6Fg==}
     dependencies:
       '@types/docker-modem': 3.0.6
       '@types/node': 20.12.7
+      '@types/ssh2': 1.11.19
     dev: true
 
   /@types/estree@1.0.5:
@@ -5259,8 +5260,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /docker-compose@0.24.3:
-    resolution: {integrity: sha512-x3/QN3AIOMe7j2c8f/jcycizMft7dl8MluoB9OGPAYCyKHHiPUFqI9GjCcsU0kYy24vYKMCcfR6+5ZaEyQlrxg==}
+  /docker-compose@0.24.8:
+    resolution: {integrity: sha512-plizRs/Vf15H+GCVxq2EUvyPK7ei9b/cVesHvjnX4xaXjM9spHe2Ytq0BitndFgvTJ3E3NljPNUEl7BAN43iZw==}
     engines: {node: '>= 6.0.0'}
     dependencies:
       yaml: 2.3.4
@@ -8244,16 +8245,16 @@ packages:
       minimatch: 3.1.2
     dev: true
 
-  /testcontainers@10.7.1:
-    resolution: {integrity: sha512-JarbT6o7fv1siUts4tGv3wBoYrWKxjla69+5QWG9+bcd4l+ECJ3ikfGD/hpXRmRBsnjzeWyV+tL9oWOBRzk+lA==}
+  /testcontainers@10.9.0:
+    resolution: {integrity: sha512-LN+cKAOd61Up9SVMJW+3VFVGeVQG8JBqZhEQo2U0HBfIsAynyAXcsLBSo+KZrOfy9SBz7pGHctWN/KabLDbNFA==}
     dependencies:
       '@balena/dockerignore': 1.0.2
-      '@types/dockerode': 3.3.23
+      '@types/dockerode': 3.3.28
       archiver: 5.3.2
       async-lock: 1.4.1
       byline: 5.0.0
       debug: 4.3.4
-      docker-compose: 0.24.3
+      docker-compose: 0.24.8
       dockerode: 3.3.5
       get-port: 5.1.1
       node-fetch: 2.7.0
