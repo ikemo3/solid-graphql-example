@@ -15,8 +15,8 @@ dependencies:
     specifier: ^1.0.17
     version: 1.0.17(zod@3.23.4)
   '@generouted/solid-router':
-    specifier: ^1.18.4
-    version: 1.18.4(@solidjs/router@0.13.2)(solid-js@1.8.17)(vite@5.2.10)
+    specifier: ^1.19.3
+    version: 1.19.3(@solidjs/router@0.13.2)(solid-js@1.8.17)(vite@5.2.10)
   '@graphql-typed-document-node/core':
     specifier: ^3.2.0
     version: 3.2.0(graphql@16.8.1)
@@ -1299,8 +1299,8 @@ packages:
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
     dev: false
 
-  /@generouted/solid-router@1.18.4(@solidjs/router@0.13.2)(solid-js@1.8.17)(vite@5.2.10):
-    resolution: {integrity: sha512-nUTrnxVJvgyD6msMxcAP4EyQEuVBTJRyc/kQClKSSqYnpV4RJuJOenmnlviIMzQ4yWFws03ZHH6NJxIZ5BOgzw==}
+  /@generouted/solid-router@1.19.3(@solidjs/router@0.13.2)(solid-js@1.8.17)(vite@5.2.10):
+    resolution: {integrity: sha512-gbXWxQGSBZGgHGfykkaV2SXWpNOVgYtEfcyrKegkomHuhzFIUZUqlRceN9dRWR50bo3A/CzvwKSQXQkrc9ug0g==}
     peerDependencies:
       '@solidjs/router': '>=0.8'
       solid-js: '>=1'
@@ -1308,7 +1308,7 @@ packages:
     dependencies:
       '@solidjs/router': 0.13.2(solid-js@1.8.17)
       fast-glob: 3.3.2
-      generouted: 1.18.4(vite@5.2.10)
+      generouted: 1.19.3(vite@5.2.10)
       solid-js: 1.8.17
       vite: 5.2.10
     dev: false
@@ -4392,8 +4392,8 @@ packages:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
     dev: true
 
-  /generouted@1.18.4(vite@5.2.10):
-    resolution: {integrity: sha512-f1ibsrEIjlXeu2w2eIUV4lnr6cB5BmkUU+H2wI3VkNDD/BiPjO3EB7NVvN1GGJ3qsBBmnstZ2k6NmQk2HeMCDA==}
+  /generouted@1.19.3(vite@5.2.10):
+    resolution: {integrity: sha512-1KnOmPYBNryAm+9PvvOTOzKiWvuBKRwK+Xr4dP/I9U00y7UAv/VrFGeb0v7mYMiny6jpWBmfBFKaUvq4Q0Z4dQ==}
     peerDependencies:
       vite: '>=3'
     dependencies:
