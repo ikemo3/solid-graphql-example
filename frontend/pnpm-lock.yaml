@@ -143,8 +143,8 @@ devDependencies:
     specifier: ^4.0.1
     version: 4.0.1
   solid-devtools:
-    specifier: ^0.29.3
-    version: 0.29.3(solid-js@1.8.17)(vite@5.1.7)
+    specifier: ^0.30.1
+    version: 0.30.1(solid-js@1.8.17)(vite@5.1.7)
   sort-package-json:
     specifier: ^2.10.0
     version: 2.10.0
@@ -294,7 +294,7 @@ packages:
     dependencies:
       '@babel/compat-data': 7.23.5
       '@babel/helper-validator-option': 7.23.5
-      browserslist: 4.22.2
+      browserslist: 4.23.0
       lru-cache: 5.1.1
       semver: 6.3.1
     dev: true
@@ -2054,36 +2054,36 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /@solid-devtools/debugger@0.23.3(solid-js@1.8.17):
-    resolution: {integrity: sha512-VrgswTjb2FyHxQJp5y5u7OaJ2k1R14LYlAOX/1rDZrGHWKdGYCaWHGzxI7C8AExtMP+LS+WOxy0uXMPQpoAD2g==}
+  /@solid-devtools/debugger@0.23.4(solid-js@1.8.17):
+    resolution: {integrity: sha512-EfTB1Eo313wztQYGJ4Ec/wE70Ay2d603VCXfT3RlyqO5QfLrQGRHX5NXC07hJpQTJJJ3tbNgzO7+ZKo76MM5uA==}
     peerDependencies:
       solid-js: ^1.8.0
     dependencies:
       '@nothing-but/utils': 0.12.1
-      '@solid-devtools/shared': 0.13.1(solid-js@1.8.17)
+      '@solid-devtools/shared': 0.13.2(solid-js@1.8.17)
       '@solid-primitives/bounds': 0.0.118(solid-js@1.8.17)
       '@solid-primitives/cursor': 0.0.112(solid-js@1.8.17)
       '@solid-primitives/event-bus': 1.0.9(solid-js@1.8.17)
-      '@solid-primitives/event-listener': 2.3.0(solid-js@1.8.17)
+      '@solid-primitives/event-listener': 2.3.1(solid-js@1.8.17)
       '@solid-primitives/keyboard': 1.2.6(solid-js@1.8.17)
       '@solid-primitives/platform': 0.1.1(solid-js@1.8.17)
-      '@solid-primitives/rootless': 1.4.2(solid-js@1.8.17)
+      '@solid-primitives/rootless': 1.4.3(solid-js@1.8.17)
       '@solid-primitives/scheduled': 1.4.2(solid-js@1.8.17)
       '@solid-primitives/static-store': 0.0.5(solid-js@1.8.17)
       '@solid-primitives/utils': 6.2.3(solid-js@1.8.17)
       solid-js: 1.8.17
     dev: true
 
-  /@solid-devtools/shared@0.13.1(solid-js@1.8.17):
-    resolution: {integrity: sha512-qaAcZF47FFr4alVQSy5ooLy7mMt4MMDxSHw52heY1oCut8yfXDrnLcYDONabfoin2WYIwsQpjYhryHgjtB0uDg==}
+  /@solid-devtools/shared@0.13.2(solid-js@1.8.17):
+    resolution: {integrity: sha512-Y4uaC4EfTVwBR537MZwfaY/eiWAh+hW4mbtnwNuUw/LFmitHSkQhNQTUlLQv/S0chtwrYWQBxvXos1dC7e8R9g==}
     peerDependencies:
       solid-js: ^1.8.0
     dependencies:
       '@solid-primitives/event-bus': 1.0.9(solid-js@1.8.17)
-      '@solid-primitives/event-listener': 2.3.0(solid-js@1.8.17)
+      '@solid-primitives/event-listener': 2.3.1(solid-js@1.8.17)
       '@solid-primitives/media': 2.2.5(solid-js@1.8.17)
       '@solid-primitives/refs': 1.0.5(solid-js@1.8.17)
-      '@solid-primitives/rootless': 1.4.2(solid-js@1.8.17)
+      '@solid-primitives/rootless': 1.4.3(solid-js@1.8.17)
       '@solid-primitives/scheduled': 1.4.2(solid-js@1.8.17)
       '@solid-primitives/static-store': 0.0.5(solid-js@1.8.17)
       '@solid-primitives/styles': 0.0.111(solid-js@1.8.17)
@@ -2269,7 +2269,7 @@ packages:
     peerDependencies:
       solid-js: ^1.6.12
     dependencies:
-      '@solid-primitives/rootless': 1.4.2(solid-js@1.8.17)
+      '@solid-primitives/rootless': 1.4.3(solid-js@1.8.17)
       '@solid-primitives/utils': 6.2.3(solid-js@1.8.17)
       solid-js: 1.8.17
     dev: true
@@ -3115,17 +3115,6 @@ packages:
     dependencies:
       fill-range: 7.0.1
 
-  /browserslist@4.22.2:
-    resolution: {integrity: sha512-0UgcrvQmBDvZHFGdYUehrCNIazki7/lUP3kkoi/r3YB2amZbFM9J43ZRkJTXBUZK4gmx56+Sqk9+Vs9mwZx9+A==}
-    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
-    hasBin: true
-    dependencies:
-      caniuse-lite: 1.0.30001591
-      electron-to-chromium: 1.4.620
-      node-releases: 2.0.14
-      update-browserslist-db: 1.0.13(browserslist@4.22.2)
-    dev: true
-
   /browserslist@4.23.0:
     resolution: {integrity: sha512-QW8HiM1shhT2GuzkvklfjcKDiWFXHOeFCIA/huJPwHsslwcydgk7X+z2zXpEijP98UCY7HbubZt5J2Zgvf0CaQ==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
@@ -3189,10 +3178,6 @@ packages:
   /camelcase@5.3.1:
     resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
     engines: {node: '>=6'}
-    dev: true
-
-  /caniuse-lite@1.0.30001591:
-    resolution: {integrity: sha512-PCzRMei/vXjJyL5mJtzNiUCKP59dm8Apqc3PH8gJkMnMXZGox93RbE76jHsmLwmIo6/3nsYIpJtx0O7u5PqFuQ==}
     dev: true
 
   /caniuse-lite@1.0.30001612:
@@ -3750,10 +3735,6 @@ packages:
 
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
-
-  /electron-to-chromium@1.4.620:
-    resolution: {integrity: sha512-a2fcSHOHrqBJsPNXtf6ZCEZpXrFCcbK1FBxfX3txoqWzNgtEDG1f3M59M98iwxhRW4iMKESnSjbJ310/rkrp0g==}
-    dev: true
 
   /electron-to-chromium@1.4.746:
     resolution: {integrity: sha512-jeWaIta2rIG2FzHaYIhSuVWqC6KJYo7oSBX4Jv7g+aVujKztfvdpf+n6MGwZdC5hQXbax4nntykLH2juIQrfPg==}
@@ -6882,8 +6863,8 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /solid-devtools@0.29.3(solid-js@1.8.17)(vite@5.1.7):
-    resolution: {integrity: sha512-9j3VxVbEoC54ML22gAMytR8ZS1nk9xKatsWziKSkI4c/Bcyh4sxQBGESHuXSLs9xaxpyGVTmFl3hknoxEpKzlA==}
+  /solid-devtools@0.30.1(solid-js@1.8.17)(vite@5.1.7):
+    resolution: {integrity: sha512-axpXL4JV1dnGhuei+nSGS8ewGeNkmIgFDsAlO90YyYY5t8wU1R0aYAQtL+I+5KICLKPBvfkzdcFa2br7AV4lAw==}
     peerDependencies:
       solid-js: ^1.8.0
       solid-start: ^0.3.0
@@ -6897,8 +6878,8 @@ packages:
       '@babel/core': 7.23.7
       '@babel/plugin-syntax-typescript': 7.23.3(@babel/core@7.23.7)
       '@babel/types': 7.23.6
-      '@solid-devtools/debugger': 0.23.3(solid-js@1.8.17)
-      '@solid-devtools/shared': 0.13.1(solid-js@1.8.17)
+      '@solid-devtools/debugger': 0.23.4(solid-js@1.8.17)
+      '@solid-devtools/shared': 0.13.2(solid-js@1.8.17)
       solid-js: 1.8.17
       vite: 5.1.7
     transitivePeerDependencies:
@@ -7490,17 +7471,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       normalize-path: 2.1.1
-    dev: true
-
-  /update-browserslist-db@1.0.13(browserslist@4.22.2):
-    resolution: {integrity: sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==}
-    hasBin: true
-    peerDependencies:
-      browserslist: '>= 4.21.0'
-    dependencies:
-      browserslist: 4.22.2
-      escalade: 3.1.1
-      picocolors: 1.0.0
     dev: true
 
   /update-browserslist-db@1.0.13(browserslist@4.23.0):
