@@ -14,15 +14,16 @@
       "lookupNameTemplate": "nodejs/node",
       "datasourceTemplate": "github-tags",
       "versioningTemplate": "node"
-    },
-    {
-      "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
-      "matchStrings": [
-        "pnpm-version: \"(?<currentValue>.+)\"",
-        "pnpm-version: (?<currentValue>.+)"
-      ],
-      "depNameTemplate": "pnpm",
-      "datasourceTemplate": "npm"
     }
-  ]
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": "patch",
+      "groupName": "dependencies patch",
+      "automerge": true
+    }
+  ],
+  "major": {
+    "dependencyDashboardApproval": true
+  }
 }
