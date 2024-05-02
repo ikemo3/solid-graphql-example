@@ -51,7 +51,7 @@
     },
     {
       "filename": "renovate.json",
-      "words": ["datasourceTemplate"]
+      "words": ["automerge", "datasourceTemplate"]
     },
     {
       "filename": "schema.prisma",
