@@ -35,7 +35,7 @@
     "@felte/validator-zod": "^1.0.17",
     "@generouted/solid-router": "^1.19.3",
     "@graphql-typed-document-node/core": "^3.2.0",
-    "@kobalte/core": "^0.12.6",
+    "@kobalte/core": "^0.13.1",
     "@mdx-js/rollup": "^3.0.1",
     "@solid-primitives/clipboard": "^1.5.10",
     "@solidjs/meta": "^0.29.3",
