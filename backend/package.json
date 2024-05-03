@@ -24,8 +24,8 @@
     "watch": "tsx ./tools/watch.ts"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.567.0",
-    "@aws-sdk/s3-request-presigner": "^3.567.0",
+    "@aws-sdk/client-s3": "^3.569.0",
+    "@aws-sdk/s3-request-presigner": "^3.569.0",
     "@escape.tech/graphql-armor": "^2.4.0",
     "@graphql-yoga/plugin-disable-introspection": "^2.3.0",
     "@graphql-yoga/redis-event-target": "^3.0.0",
