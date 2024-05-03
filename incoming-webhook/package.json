@@ -25,7 +25,7 @@
     "dockerode": "^4.0.2",
     "hono": "^4.2.9",
     "tsx": "^4.8.2",
-    "zod": "^3.23.5"
+    "zod": "^3.23.6"
   },
   "devDependencies": {
     "@types/dockerode": "^3.3.29",
