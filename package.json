@@ -26,5 +26,5 @@
     "tsx": "^4.9.3",
     "yaml": "^2.4.2"
   },
-  "packageManager": "pnpm@9.0.6"
+  "packageManager": "pnpm@9.1.0"
 }
