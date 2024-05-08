@@ -13,13 +13,13 @@ importers:
         version: 1.11.1
       '@hono/zod-validator':
         specifier: ^0.2.1
-        version: 0.2.1(hono@4.3.2)(zod@3.23.7)
+        version: 0.2.1(hono@4.3.3)(zod@3.23.7)
       dockerode:
         specifier: ^4.0.2
         version: 4.0.2
       hono:
-        specifier: ^4.3.2
-        version: 4.3.2
+        specifier: ^4.3.3
+        version: 4.3.3
       tsx:
         specifier: ^4.9.3
         version: 4.9.3
@@ -31,8 +31,8 @@ importers:
         specifier: ^3.3.29
         version: 3.3.29
       '@types/node':
-        specifier: ^20.12.10
-        version: 20.12.10
+        specifier: ^20.12.11
+        version: 20.12.11
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.8.0
         version: 7.8.0(@typescript-eslint/parser@7.8.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
@@ -41,7 +41,7 @@ importers:
         version: 7.8.0(eslint@8.57.0)(typescript@5.4.5)
       '@vitest/coverage-istanbul':
         specifier: ^1.6.0
-        version: 1.6.0(vitest@1.6.0(@types/node@20.12.10))
+        version: 1.6.0(vitest@1.6.0(@types/node@20.12.11))
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -62,7 +62,7 @@ importers:
         version: 5.4.5
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@types/node@20.12.10)
+        version: 1.6.0(@types/node@20.12.11)
 
 packages:
 
@@ -472,8 +472,8 @@ packages:
   '@types/node@18.19.24':
     resolution: {integrity: sha512-eghAz3gnbQbvnHqB+mgB2ZR3aH6RhdEmHGS48BnV75KceQPHqabkxKI0BbUSsqhqy2Ddhc2xD/VAR9ySZd57Lw==}
 
-  '@types/node@20.12.10':
-    resolution: {integrity: sha512-Eem5pH9pmWBHoGAT8Dr5fdc5rYA+4NAovdM4EktRPVAAiJhmWWfQrA0cFhAbOsQdSfIHjAud6YdkbL69+zSKjw==}
+  '@types/node@20.12.11':
+    resolution: {integrity: sha512-vDg9PZ/zi+Nqp6boSOT7plNuthRugEKixDv5sFTIpkE89MmNtEArAShI4mxuX2+UrLEe9pxC1vm2cjm9YlWbJw==}
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
@@ -919,8 +919,8 @@ packages:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
 
-  hono@4.3.2:
-    resolution: {integrity: sha512-wiZcF5N06tc232U11DnqW6hP8DNoypjsrxslKXfvOqOAkTdh7K1HLZJH/92Mf+urxUTGi96f1w4xx/1Qozoqiw==}
+  hono@4.3.3:
+    resolution: {integrity: sha512-LDa1n/aLYK4CsZQyjQpFiaQgxiXCZp0WfcfliinQOH1Lqt4mIOvyw4qjmHihpKXsuXhkQHfHU2Erysp6oEdnVA==}
     engines: {node: '>=16.0.0'}
 
   html-escaper@2.0.2:
@@ -1759,9 +1759,9 @@ snapshots:
 
   '@hono/node-server@1.11.1': {}
 
-  '@hono/zod-validator@0.2.1(hono@4.3.2)(zod@3.23.7)':
+  '@hono/zod-validator@0.2.1(hono@4.3.3)(zod@3.23.7)':
     dependencies:
-      hono: 4.3.2
+      hono: 4.3.3
       zod: 3.23.7
 
   '@humanwhocodes/config-array@0.11.14':
@@ -1860,13 +1860,13 @@ snapshots:
 
   '@types/docker-modem@3.0.6':
     dependencies:
-      '@types/node': 20.12.10
+      '@types/node': 20.12.11
       '@types/ssh2': 1.15.0
 
   '@types/dockerode@3.3.29':
     dependencies:
       '@types/docker-modem': 3.0.6
-      '@types/node': 20.12.10
+      '@types/node': 20.12.11
       '@types/ssh2': 1.15.0
 
   '@types/estree@1.0.5': {}
@@ -1877,7 +1877,7 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@20.12.10':
+  '@types/node@20.12.11':
     dependencies:
       undici-types: 5.26.5
 
@@ -1975,7 +1975,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitest/coverage-istanbul@1.6.0(vitest@1.6.0(@types/node@20.12.10))':
+  '@vitest/coverage-istanbul@1.6.0(vitest@1.6.0(@types/node@20.12.11))':
     dependencies:
       debug: 4.3.4
       istanbul-lib-coverage: 3.2.2
@@ -1986,7 +1986,7 @@ snapshots:
       magicast: 0.3.3
       picocolors: 1.0.0
       test-exclude: 6.0.0
-      vitest: 1.6.0(@types/node@20.12.10)
+      vitest: 1.6.0(@types/node@20.12.11)
     transitivePeerDependencies:
       - supports-color
 
@@ -2434,7 +2434,7 @@ snapshots:
 
   has-flag@4.0.0: {}
 
-  hono@4.3.2: {}
+  hono@4.3.3: {}
 
   html-escaper@2.0.2: {}
 
@@ -2919,13 +2919,13 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-node@1.6.0(@types/node@20.12.10):
+  vite-node@1.6.0(@types/node@20.12.11):
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.2.8(@types/node@20.12.10)
+      vite: 5.2.8(@types/node@20.12.11)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -2936,16 +2936,16 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.2.8(@types/node@20.12.10):
+  vite@5.2.8(@types/node@20.12.11):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.14.0
     optionalDependencies:
-      '@types/node': 20.12.10
+      '@types/node': 20.12.11
       fsevents: 2.3.3
 
-  vitest@1.6.0(@types/node@20.12.10):
+  vitest@1.6.0(@types/node@20.12.11):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -2964,11 +2964,11 @@ snapshots:
       strip-literal: 2.0.0
       tinybench: 2.6.0
       tinypool: 0.8.4
-      vite: 5.2.8(@types/node@20.12.10)
-      vite-node: 1.6.0(@types/node@20.12.10)
+      vite: 5.2.8(@types/node@20.12.11)
+      vite-node: 1.6.0(@types/node@20.12.11)
       why-is-node-running: 2.2.2
     optionalDependencies:
-      '@types/node': 20.12.10
+      '@types/node': 20.12.11
     transitivePeerDependencies:
       - less
       - lightningcss
