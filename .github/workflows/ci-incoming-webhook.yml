@@ -26,7 +26,7 @@ defaults:
     working-directory: incoming-webhook
 
 env:
-  node-version: "20.13.0"
+  node-version: "20.13.1"
 
 jobs:
   build:
