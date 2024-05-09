@@ -1,5 +1,5 @@
 # ビルド用のイメージを作成
-FROM node:20.12.2-slim AS build
+FROM node:20.13.0-slim AS build
 
 # 環境変数を設定
 ARG VITE_API_BASE_URL
