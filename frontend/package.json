@@ -47,7 +47,7 @@
     "date-fns": "^3.6.0",
     "graphql": "^16.8.1",
     "graphql-sse": "^2.5.3",
-    "i18next": "^23.11.3",
+    "i18next": "^23.11.4",
     "initials": "^3.1.2",
     "solid-icons": "^1.1.0",
     "solid-js": "^1.8.17",
