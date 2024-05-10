@@ -3,6 +3,7 @@
   "extends": ["config:base"],
   "rangeStrategy": "bump",
   "labels": ["dependencies"],
+  "dependencyDashboardApproval": true,
   "regexManagers": [
     {
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
