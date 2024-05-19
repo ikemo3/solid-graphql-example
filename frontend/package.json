@@ -33,12 +33,12 @@
     "@auth0/auth0-spa-js": "^2.1.3",
     "@felte/solid": "^1.2.13",
     "@felte/validator-zod": "^1.0.17",
-    "@generouted/solid-router": "^1.19.3",
+    "@generouted/solid-router": "^1.19.4",
     "@graphql-typed-document-node/core": "^3.2.0",
     "@kobalte/core": "^0.12.6",
     "@mdx-js/rollup": "^3.0.1",
     "@solid-primitives/clipboard": "^1.5.10",
-    "@solidjs/meta": "^0.29.3",
+    "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.13.3",
     "@tanker/file-reader": "^4.1.1",
     "@thisbeyond/solid-dnd": "^0.7.5",
@@ -58,8 +58,8 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^5.0.2",
-    "@graphql-codegen/client-preset": "^4.2.5",
-    "@solidjs/testing-library": "^0.8.7",
+    "@graphql-codegen/client-preset": "^4.2.6",
+    "@solidjs/testing-library": "^0.8.8",
     "@tailwindcss/typography": "^0.5.13",
     "@testing-library/jest-dom": "^6.4.5",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
@@ -70,7 +70,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "eslint-plugin-solid": "^0.14.0",
-    "eslint-plugin-tailwindcss": "^3.15.1",
+    "eslint-plugin-tailwindcss": "^3.15.2",
     "jsdom": "^24.0.0",
     "nginx-linter": "^0.6.3",
     "npm-run-all2": "^6.1.2",
@@ -87,5 +87,5 @@
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.6.0"
   },
-  "packageManager": "pnpm@9.1.0"
+  "packageManager": "pnpm@9.1.1"
 }
