@@ -3,7 +3,6 @@
   "extends": ["config:base"],
   "rangeStrategy": "bump",
   "labels": ["dependencies"],
-  "dependencyDashboardApproval": true,
   "regexManagers": [
     {
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
@@ -24,6 +23,9 @@
       "automerge": true
     }
   ],
+  "minor": {
+    "schedule": ["every weekend"]
+  },
   "major": {
     "dependencyDashboardApproval": true
   }
