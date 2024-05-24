@@ -13,13 +13,13 @@ importers:
         version: 1.11.1
       '@hono/zod-validator':
         specifier: ^0.2.1
-        version: 0.2.1(hono@4.3.7)(zod@3.23.8)
+        version: 0.2.1(hono@4.3.11)(zod@3.23.8)
       dockerode:
         specifier: ^4.0.2
         version: 4.0.2
       hono:
-        specifier: ^4.3.7
-        version: 4.3.7
+        specifier: ^4.3.11
+        version: 4.3.11
       tsx:
         specifier: ^4.9.4
         version: 4.9.4
@@ -919,8 +919,8 @@ packages:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
 
-  hono@4.3.7:
-    resolution: {integrity: sha512-GXlsGnCAwGosu+COwYyYC8MwOY2L6Ihg9V1znYdMD8DHCJl+13Nk4o8dsBYJpae4oujjw24jBaITuYWVq2+V8Q==}
+  hono@4.3.11:
+    resolution: {integrity: sha512-Hle1uNqJJKkebFkFEEWr3UAElJP922Xy0STfl8c+1PH1q+l6WrmhwAJFS6YH8ZWJY4z46qJtssbyVwwPm3dP5w==}
     engines: {node: '>=16.0.0'}
 
   html-escaper@2.0.2:
@@ -947,6 +947,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -1759,9 +1760,9 @@ snapshots:
 
   '@hono/node-server@1.11.1': {}
 
-  '@hono/zod-validator@0.2.1(hono@4.3.7)(zod@3.23.8)':
+  '@hono/zod-validator@0.2.1(hono@4.3.11)(zod@3.23.8)':
     dependencies:
-      hono: 4.3.7
+      hono: 4.3.11
       zod: 3.23.8
 
   '@humanwhocodes/config-array@0.11.14':
@@ -2434,7 +2435,7 @@ snapshots:
 
   has-flag@4.0.0: {}
 
-  hono@4.3.7: {}
+  hono@4.3.11: {}
 
   html-escaper@2.0.2: {}
 

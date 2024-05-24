@@ -18,8 +18,8 @@ importers:
         specifier: ^1.0.17
         version: 1.0.17(zod@3.23.8)
       '@generouted/solid-router':
-        specifier: ^1.19.4
-        version: 1.19.4(@solidjs/router@0.13.3(solid-js@1.8.17))(solid-js@1.8.17)(vite@5.2.11(@types/node@20.11.10))
+        specifier: ^1.19.5
+        version: 1.19.5(@solidjs/router@0.13.3(solid-js@1.8.17))(solid-js@1.8.17)(vite@5.2.11(@types/node@20.11.10))
       '@graphql-typed-document-node/core':
         specifier: ^3.2.0
         version: 3.2.0(graphql@16.8.1)
@@ -60,8 +60,8 @@ importers:
         specifier: ^2.5.3
         version: 2.5.3(graphql@16.8.1)
       i18next:
-        specifier: ^23.11.4
-        version: 23.11.4
+        specifier: ^23.11.5
+        version: 23.11.5
       initials:
         specifier: ^3.1.2
         version: 3.1.2
@@ -82,7 +82,7 @@ importers:
         version: 3.23.8
       zod-i18n-map:
         specifier: ^2.27.0
-        version: 2.27.0(i18next@23.11.4)(zod@3.23.8)
+        version: 2.27.0(i18next@23.11.5)(zod@3.23.8)
     devDependencies:
       '@graphql-codegen/cli':
         specifier: ^5.0.2
@@ -687,8 +687,8 @@ packages:
   '@floating-ui/utils@0.2.1':
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
 
-  '@generouted/solid-router@1.19.4':
-    resolution: {integrity: sha512-S1XjF86u8GUHgbpgCCF02WQF6FvVKEjG7EAcKZrHCWk7v1y93xDryVTYdAgh097qOzxE8/spMUom9YcgTp1b1w==}
+  '@generouted/solid-router@1.19.5':
+    resolution: {integrity: sha512-P9lDPIXJBX2+Q/3DkCN8nsAKz2TEkQWq7GmJ7/V7ksEjD66HSu/6IdsmzIjzQ8WoF2w7sOckoPus2P2EsYx1Gg==}
     peerDependencies:
       '@solidjs/router': '>=0.8'
       solid-js: '>=1'
@@ -2234,8 +2234,8 @@ packages:
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
 
-  generouted@1.19.4:
-    resolution: {integrity: sha512-33y/vqC6zSIVO274fZKcuJfLQ+urJ+eHn+XdKpiYp5ZTsd83deTjQCp4qcQ8rJbKBNjchj+HUDlTGdXg1mgtOw==}
+  generouted@1.19.5:
+    resolution: {integrity: sha512-hts4B0UhYzPKGmGsGhkbCclcZWAeTe3EKW6oLY4tfXMj/A/wk/QTzeYgJqHL9dJd5d0E8vUoqpV6TucH50I9Rw==}
     peerDependencies:
       vite: '>=3'
 
@@ -2424,8 +2424,8 @@ packages:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
 
-  i18next@23.11.4:
-    resolution: {integrity: sha512-CCUjtd5TfaCl+mLUzAA0uPSN+AVn4fP/kWCYt/hocPUwusTpMVczdrRyOBUwk6N05iH40qiKx6q1DoNJtBIwdg==}
+  i18next@23.11.5:
+    resolution: {integrity: sha512-41pvpVbW9rhZPk5xjCX2TPJi2861LEig/YRhUkY+1FQ2IQPS0bKUDYnEqY8XPPbB48h1uIwLnP9iiEfuSl20CA==}
 
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
@@ -2468,6 +2468,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -4800,11 +4801,11 @@ snapshots:
 
   '@floating-ui/utils@0.2.1': {}
 
-  '@generouted/solid-router@1.19.4(@solidjs/router@0.13.3(solid-js@1.8.17))(solid-js@1.8.17)(vite@5.2.11(@types/node@20.11.10))':
+  '@generouted/solid-router@1.19.5(@solidjs/router@0.13.3(solid-js@1.8.17))(solid-js@1.8.17)(vite@5.2.11(@types/node@20.11.10))':
     dependencies:
       '@solidjs/router': 0.13.3(solid-js@1.8.17)
       fast-glob: 3.3.2
-      generouted: 1.19.4(vite@5.2.11(@types/node@20.11.10))
+      generouted: 1.19.5(vite@5.2.11(@types/node@20.11.10))
       solid-js: 1.8.17
       vite: 5.2.11(@types/node@20.11.10)
 
@@ -6844,7 +6845,7 @@ snapshots:
 
   functions-have-names@1.2.3: {}
 
-  generouted@1.19.4(vite@5.2.11(@types/node@20.11.10)):
+  generouted@1.19.5(vite@5.2.11(@types/node@20.11.10)):
     dependencies:
       vite: 5.2.11(@types/node@20.11.10)
 
@@ -7077,7 +7078,7 @@ snapshots:
 
   human-signals@5.0.0: {}
 
-  i18next@23.11.4:
+  i18next@23.11.5:
     dependencies:
       '@babel/runtime': 7.24.4
 
@@ -9154,9 +9155,9 @@ snapshots:
 
   yocto-queue@1.0.0: {}
 
-  zod-i18n-map@2.27.0(i18next@23.11.4)(zod@3.23.8):
+  zod-i18n-map@2.27.0(i18next@23.11.5)(zod@3.23.8):
     dependencies:
-      i18next: 23.11.4
+      i18next: 23.11.5
       zod: 3.23.8
 
   zod@3.23.8: {}
