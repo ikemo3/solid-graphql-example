@@ -47,7 +47,7 @@
     "tsx": "^4.9.4"
   },
   "devDependencies": {
-    "@escape.tech/graphql-armor-types": "^0.5.0",
+    "@escape.tech/graphql-armor-types": "^0.6.0",
     "@graphql-codegen/cli": "^5.0.2",
     "@graphql-codegen/client-preset": "^4.2.6",
     "@graphql-eslint/eslint-plugin": "^3.20.1",
