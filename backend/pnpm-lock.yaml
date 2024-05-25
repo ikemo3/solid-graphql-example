@@ -16,7 +16,7 @@ importers:
         version: 3.572.0
       '@escape.tech/graphql-armor':
         specifier: ^2.4.0
-        version: 2.4.0(@envelop/core@5.0.0)(@escape.tech/graphql-armor-types@0.5.0)
+        version: 2.4.0(@envelop/core@5.0.0)(@escape.tech/graphql-armor-types@0.6.0)
       '@graphql-yoga/plugin-disable-introspection':
         specifier: ^2.3.1
         version: 2.3.1(graphql-yoga@5.3.1(graphql@16.8.1))(graphql@16.8.1)
@@ -73,8 +73,8 @@ importers:
         version: 4.11.0
     devDependencies:
       '@escape.tech/graphql-armor-types':
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.6.0
+        version: 0.6.0
       '@graphql-codegen/cli':
         specifier: ^5.0.2
         version: 5.0.2(@types/node@20.12.12)(graphql@16.8.1)
@@ -849,6 +849,9 @@ packages:
 
   '@escape.tech/graphql-armor-types@0.5.0':
     resolution: {integrity: sha512-a7KMhb1qVHFFWw4bvGYQI637YaIZRozbfc+Fj1Vv/pwnTCJOzOgnvKO8+WBXJsFFGJ2Kj+fRORmSpz7J+lJF1w==}
+
+  '@escape.tech/graphql-armor-types@0.6.0':
+    resolution: {integrity: sha512-Y3X6JgkB1N1MMaHNXaE2IeJWIs6wT4XcPvXM8PRWmT2DblZfY4NYiV1mh0GTInKdlnrEr5hquOR9XV+M3Da43w==}
 
   '@escape.tech/graphql-armor@2.4.0':
     resolution: {integrity: sha512-/ef11cDjzg3Rjsa7jxtUzM9hRVlj+GB4z/YCChNqNGW+BvYrv6E6esbdGzIiaoauKfszXSQXSu0CgPXe0I7NbQ==}
@@ -5745,8 +5748,13 @@ snapshots:
   '@escape.tech/graphql-armor-types@0.5.0':
     dependencies:
       graphql: 16.8.1
+    optional: true
 
-  '@escape.tech/graphql-armor@2.4.0(@envelop/core@5.0.0)(@escape.tech/graphql-armor-types@0.5.0)':
+  '@escape.tech/graphql-armor-types@0.6.0':
+    dependencies:
+      graphql: 16.8.1
+
+  '@escape.tech/graphql-armor@2.4.0(@envelop/core@5.0.0)(@escape.tech/graphql-armor-types@0.6.0)':
     dependencies:
       '@escape.tech/graphql-armor-block-field-suggestions': 2.1.0
       '@escape.tech/graphql-armor-cost-limit': 2.1.0
@@ -5757,7 +5765,7 @@ snapshots:
       graphql: 16.8.1
     optionalDependencies:
       '@envelop/core': 5.0.0
-      '@escape.tech/graphql-armor-types': 0.5.0
+      '@escape.tech/graphql-armor-types': 0.6.0
 
   '@eslint-community/eslint-utils@4.4.0(eslint@8.57.0)':
     dependencies:
