@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.11.2",
-    "@hono/zod-validator": "^0.2.1",
+    "@hono/zod-validator": "^0.2.2",
     "dockerode": "^4.0.2",
     "hono": "^4.3.11",
     "tsx": "^4.11.0",
