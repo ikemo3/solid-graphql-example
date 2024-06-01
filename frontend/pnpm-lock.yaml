@@ -24,8 +24,8 @@ importers:
         specifier: ^3.2.0
         version: 3.2.0(graphql@16.8.1)
       '@kobalte/core':
-        specifier: ^0.12.6
-        version: 0.12.6(solid-js@1.8.17)
+        specifier: ^0.13.2
+        version: 0.13.2(solid-js@1.8.17)
       '@mdx-js/rollup':
         specifier: ^3.0.1
         version: 3.0.1(rollup@4.14.0)
@@ -961,8 +961,8 @@ packages:
   '@kamilkisiela/fast-url-parser@1.1.4':
     resolution: {integrity: sha512-gbkePEBupNydxCelHCESvFSFM8XPh1Zs/OAVRW/rKpEqPAl5PbOM90Si8mv9bvnR53uPD2s/FiRxdvSejpRJew==}
 
-  '@kobalte/core@0.12.6':
-    resolution: {integrity: sha512-+Ta2o2wEqZ2fCqLMkvjT40VHNmcFKdGe8TNDVQbbMPk66qoU6g/DDRFR/Ib7eAjb+C95VoIyk6zaafos2VOo0w==}
+  '@kobalte/core@0.13.2':
+    resolution: {integrity: sha512-267BCL0zA+6fv7ysHsqUXHielS0BT0Y2trBAUmZ0W/xt/JMhR2nCngInSIAEXKV22TP3ZuClnsInldIcCsprOw==}
     peerDependencies:
       solid-js: ^1.8.15
 
@@ -5327,7 +5327,7 @@ snapshots:
 
   '@kamilkisiela/fast-url-parser@1.1.4': {}
 
-  '@kobalte/core@0.12.6(solid-js@1.8.17)':
+  '@kobalte/core@0.13.2(solid-js@1.8.17)':
     dependencies:
       '@floating-ui/dom': 1.5.4
       '@internationalized/date': 3.5.1
