@@ -21,7 +21,7 @@ COPY . .
 RUN pnpm build
 
 # 本番用のイメージを作成
-FROM nginx:1.26.0-alpine
+FROM nginx:1.27.0-alpine
 
 # ビルド用のイメージからビルド結果をコピー
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
