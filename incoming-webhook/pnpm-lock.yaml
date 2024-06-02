@@ -13,13 +13,13 @@ importers:
         version: 1.11.2
       '@hono/zod-validator':
         specifier: ^0.2.2
-        version: 0.2.2(hono@4.3.11)(zod@3.23.8)
+        version: 0.2.2(hono@4.4.2)(zod@3.23.8)
       dockerode:
         specifier: ^4.0.2
         version: 4.0.2
       hono:
-        specifier: ^4.3.11
-        version: 4.3.11
+        specifier: ^4.4.2
+        version: 4.4.2
       tsx:
         specifier: ^4.11.0
         version: 4.11.0
@@ -914,8 +914,8 @@ packages:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
 
-  hono@4.3.11:
-    resolution: {integrity: sha512-Hle1uNqJJKkebFkFEEWr3UAElJP922Xy0STfl8c+1PH1q+l6WrmhwAJFS6YH8ZWJY4z46qJtssbyVwwPm3dP5w==}
+  hono@4.4.2:
+    resolution: {integrity: sha512-bRhZ+BM9r04lRN2i9wiZ18yQNbZxHsmmRIItoAb43nRkHnIDsFhFh4mJ0seEs06FvenibpAgSVNHQ8ZzcDQx2A==}
     engines: {node: '>=16.0.0'}
 
   html-escaper@2.0.2:
@@ -1752,9 +1752,9 @@ snapshots:
 
   '@hono/node-server@1.11.2': {}
 
-  '@hono/zod-validator@0.2.2(hono@4.3.11)(zod@3.23.8)':
+  '@hono/zod-validator@0.2.2(hono@4.4.2)(zod@3.23.8)':
     dependencies:
-      hono: 4.3.11
+      hono: 4.4.2
       zod: 3.23.8
 
   '@humanwhocodes/config-array@0.11.14':
@@ -2418,7 +2418,7 @@ snapshots:
 
   has-flag@4.0.0: {}
 
-  hono@4.3.11: {}
+  hono@4.4.2: {}
 
   html-escaper@2.0.2: {}
 
