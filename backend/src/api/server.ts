@@ -11,7 +11,7 @@ export function createGraphQLServer(
   pubsub: PubSub<PubSubChannel>,
 ) {
   // 開発環境かどうか
-  const isDevelopment = process.env.NODE_ENV === "production";
+  const isDevelopment = process.env.NODE_ENV !== "production";
 
   // GraphQLの設定
   const armor = new EnvelopArmor();
