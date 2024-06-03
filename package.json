@@ -16,7 +16,7 @@
     "watch": "tsx ./tools/watch.ts"
   },
   "devDependencies": {
-    "@types/node": "^20.13.0",
+    "@types/node": "^20.14.0",
     "chokidar": "^3.6.0",
     "cspell": "^8.8.4",
     "execa": "^9.1.0",
