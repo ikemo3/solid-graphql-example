@@ -57,7 +57,7 @@
     "@mermaid-js/mermaid-cli": "^10.9.1",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
-    "@types/node": "^20.14.0",
+    "@types/node": "^20.14.1",
     "@typescript-eslint/eslint-plugin": "^7.11.0",
     "@typescript-eslint/parser": "^7.11.0",
     "@vitest/coverage-istanbul": "^1.6.0",
