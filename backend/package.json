@@ -44,7 +44,7 @@
     "helmet": "^7.1.0",
     "ioredis": "^5.4.1",
     "prisma": "^5.15.0",
-    "tsx": "^4.15.1"
+    "tsx": "^4.15.2"
   },
   "devDependencies": {
     "@escape.tech/graphql-armor-types": "^0.6.0",
@@ -69,7 +69,7 @@
     "execa": "^9.2.0",
     "graphql-schema-linter": "^3.0.1",
     "npm-run-all2": "^6.2.0",
-    "prettier": "^3.3.1",
+    "prettier": "^3.3.2",
     "prisma-erd-generator": "^1.11.2",
     "sort-package-json": "^2.10.0",
     "testcontainers": "^10.9.0",
