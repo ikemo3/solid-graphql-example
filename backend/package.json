@@ -44,7 +44,7 @@
     "helmet": "^7.1.0",
     "ioredis": "^5.4.1",
     "prisma": "^5.15.0",
-    "tsx": "^4.15.4"
+    "tsx": "^4.15.5"
   },
   "devDependencies": {
     "@escape.tech/graphql-armor-types": "^0.6.0",
