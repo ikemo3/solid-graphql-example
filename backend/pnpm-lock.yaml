@@ -77,16 +77,16 @@ importers:
         version: 0.6.0
       '@graphql-codegen/cli':
         specifier: ^5.0.2
-        version: 5.0.2(@types/node@20.14.3)(graphql@16.8.2)
+        version: 5.0.2(@types/node@20.14.4)(graphql@16.8.2)
       '@graphql-codegen/client-preset':
         specifier: ^4.3.0
         version: 4.3.0(graphql@16.8.2)
       '@graphql-eslint/eslint-plugin':
         specifier: ^3.20.1
-        version: 3.20.1(@babel/core@7.24.3)(@types/node@20.14.3)(graphql@16.8.2)
+        version: 3.20.1(@babel/core@7.24.3)(@types/node@20.14.4)(graphql@16.8.2)
       '@graphql-tools/executor-http':
         specifier: ^1.0.9
-        version: 1.0.9(@types/node@20.14.3)(graphql@16.8.2)
+        version: 1.0.9(@types/node@20.14.4)(graphql@16.8.2)
       '@graphql-tools/utils':
         specifier: ^10.2.2
         version: 10.2.2(graphql@16.8.2)
@@ -103,8 +103,8 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
       '@types/node':
-        specifier: ^20.14.3
-        version: 20.14.3
+        specifier: ^20.14.4
+        version: 20.14.4
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.13.1
         version: 7.13.1(@typescript-eslint/parser@7.13.1(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
@@ -113,7 +113,7 @@ importers:
         version: 7.13.1(eslint@8.57.0)(typescript@5.4.5)
       '@vitest/coverage-istanbul':
         specifier: ^1.6.0
-        version: 1.6.0(vitest@1.6.0(@types/node@20.14.3))
+        version: 1.6.0(vitest@1.6.0(@types/node@20.14.4))
       chalk:
         specifier: ^5.3.0
         version: 5.3.0
@@ -155,10 +155,10 @@ importers:
         version: 5.4.5
       vite-tsconfig-paths:
         specifier: ^4.3.2
-        version: 4.3.2(typescript@5.4.5)(vite@5.2.8(@types/node@20.14.3))
+        version: 4.3.2(typescript@5.4.5)(vite@5.2.8(@types/node@20.14.4))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@types/node@20.14.3)
+        version: 1.6.0(@types/node@20.14.4)
 
 packages:
 
@@ -1846,8 +1846,8 @@ packages:
   '@types/node@18.19.17':
     resolution: {integrity: sha512-SzyGKgwPzuWp2SHhlpXKzCX0pIOfcI4V2eF37nNBJOhwlegQ83omtVQ1XxZpDE06V/d6AQvfQdPfnw0tRC//Ng==}
 
-  '@types/node@20.14.3':
-    resolution: {integrity: sha512-Nuzqa6WAxeGnve6SXqiPAM9rA++VQs+iLZ1DDd56y0gdvygSZlQvZuvdFPR3yLqkVxPu4WrO02iDEyH1g+wazw==}
+  '@types/node@20.14.4':
+    resolution: {integrity: sha512-1ChboN+57suCT2t/f8lwtPY/k3qTpuD/qnqQuYoBg6OQOcPyaw7PiZVdGpaZYAvhDDtqrt0oAaM8+oSu1xsUGw==}
 
   '@types/qs@6.9.11':
     resolution: {integrity: sha512-oGk0gmhnEJK4Yyk+oI7EfXsLayXatCWPHary1MtcmbAifkobT9cM9yutG/hZKIseOU0MqbIwQ/u2nn/Gb+ltuQ==}
@@ -4953,10 +4953,10 @@ snapshots:
       '@aws-crypto/sha1-browser': 5.2.0
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/client-sso-oidc': 3.598.0
-      '@aws-sdk/client-sts': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0)
+      '@aws-sdk/client-sso-oidc': 3.598.0(@aws-sdk/client-sts@3.598.0)
+      '@aws-sdk/client-sts': 3.598.0
       '@aws-sdk/core': 3.598.0
-      '@aws-sdk/credential-provider-node': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0)(@aws-sdk/client-sts@3.598.0(@aws-sdk/client-sso-oidc@3.598.0))
+      '@aws-sdk/credential-provider-node': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0(@aws-sdk/client-sts@3.598.0))(@aws-sdk/client-sts@3.598.0)
       '@aws-sdk/middleware-bucket-endpoint': 3.598.0
       '@aws-sdk/middleware-expect-continue': 3.598.0
       '@aws-sdk/middleware-flexible-checksums': 3.598.0
@@ -5011,13 +5011,13 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-sso-oidc@3.598.0':
+  '@aws-sdk/client-sso-oidc@3.598.0(@aws-sdk/client-sts@3.598.0)':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/client-sts': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0)
+      '@aws-sdk/client-sts': 3.598.0
       '@aws-sdk/core': 3.598.0
-      '@aws-sdk/credential-provider-node': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0)(@aws-sdk/client-sts@3.598.0(@aws-sdk/client-sso-oidc@3.598.0))
+      '@aws-sdk/credential-provider-node': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0(@aws-sdk/client-sts@3.598.0))(@aws-sdk/client-sts@3.598.0)
       '@aws-sdk/middleware-host-header': 3.598.0
       '@aws-sdk/middleware-logger': 3.598.0
       '@aws-sdk/middleware-recursion-detection': 3.598.0
@@ -5054,6 +5054,7 @@ snapshots:
       '@smithy/util-utf8': 3.0.0
       tslib: 2.6.2
     transitivePeerDependencies:
+      - '@aws-sdk/client-sts'
       - aws-crt
 
   '@aws-sdk/client-sso@3.598.0':
@@ -5099,13 +5100,13 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-sts@3.598.0(@aws-sdk/client-sso-oidc@3.598.0)':
+  '@aws-sdk/client-sts@3.598.0':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/client-sso-oidc': 3.598.0
+      '@aws-sdk/client-sso-oidc': 3.598.0(@aws-sdk/client-sts@3.598.0)
       '@aws-sdk/core': 3.598.0
-      '@aws-sdk/credential-provider-node': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0)(@aws-sdk/client-sts@3.598.0(@aws-sdk/client-sso-oidc@3.598.0))
+      '@aws-sdk/credential-provider-node': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0(@aws-sdk/client-sts@3.598.0))(@aws-sdk/client-sts@3.598.0)
       '@aws-sdk/middleware-host-header': 3.598.0
       '@aws-sdk/middleware-logger': 3.598.0
       '@aws-sdk/middleware-recursion-detection': 3.598.0
@@ -5142,7 +5143,6 @@ snapshots:
       '@smithy/util-utf8': 3.0.0
       tslib: 2.6.2
     transitivePeerDependencies:
-      - '@aws-sdk/client-sso-oidc'
       - aws-crt
 
   '@aws-sdk/core@3.598.0':
@@ -5174,14 +5174,14 @@ snapshots:
       '@smithy/util-stream': 3.0.2
       tslib: 2.6.2
 
-  '@aws-sdk/credential-provider-ini@3.598.0(@aws-sdk/client-sso-oidc@3.598.0)(@aws-sdk/client-sts@3.598.0(@aws-sdk/client-sso-oidc@3.598.0))':
+  '@aws-sdk/credential-provider-ini@3.598.0(@aws-sdk/client-sso-oidc@3.598.0(@aws-sdk/client-sts@3.598.0))(@aws-sdk/client-sts@3.598.0)':
     dependencies:
-      '@aws-sdk/client-sts': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0)
+      '@aws-sdk/client-sts': 3.598.0
       '@aws-sdk/credential-provider-env': 3.598.0
       '@aws-sdk/credential-provider-http': 3.598.0
       '@aws-sdk/credential-provider-process': 3.598.0
-      '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0)
-      '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.598.0(@aws-sdk/client-sso-oidc@3.598.0))
+      '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0(@aws-sdk/client-sts@3.598.0))
+      '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.598.0)
       '@aws-sdk/types': 3.598.0
       '@smithy/credential-provider-imds': 3.1.1
       '@smithy/property-provider': 3.1.1
@@ -5192,14 +5192,14 @@ snapshots:
       - '@aws-sdk/client-sso-oidc'
       - aws-crt
 
-  '@aws-sdk/credential-provider-node@3.598.0(@aws-sdk/client-sso-oidc@3.598.0)(@aws-sdk/client-sts@3.598.0(@aws-sdk/client-sso-oidc@3.598.0))':
+  '@aws-sdk/credential-provider-node@3.598.0(@aws-sdk/client-sso-oidc@3.598.0(@aws-sdk/client-sts@3.598.0))(@aws-sdk/client-sts@3.598.0)':
     dependencies:
       '@aws-sdk/credential-provider-env': 3.598.0
       '@aws-sdk/credential-provider-http': 3.598.0
-      '@aws-sdk/credential-provider-ini': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0)(@aws-sdk/client-sts@3.598.0(@aws-sdk/client-sso-oidc@3.598.0))
+      '@aws-sdk/credential-provider-ini': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0(@aws-sdk/client-sts@3.598.0))(@aws-sdk/client-sts@3.598.0)
       '@aws-sdk/credential-provider-process': 3.598.0
-      '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0)
-      '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.598.0(@aws-sdk/client-sso-oidc@3.598.0))
+      '@aws-sdk/credential-provider-sso': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0(@aws-sdk/client-sts@3.598.0))
+      '@aws-sdk/credential-provider-web-identity': 3.598.0(@aws-sdk/client-sts@3.598.0)
       '@aws-sdk/types': 3.598.0
       '@smithy/credential-provider-imds': 3.1.1
       '@smithy/property-provider': 3.1.1
@@ -5219,10 +5219,10 @@ snapshots:
       '@smithy/types': 3.1.0
       tslib: 2.6.2
 
-  '@aws-sdk/credential-provider-sso@3.598.0(@aws-sdk/client-sso-oidc@3.598.0)':
+  '@aws-sdk/credential-provider-sso@3.598.0(@aws-sdk/client-sso-oidc@3.598.0(@aws-sdk/client-sts@3.598.0))':
     dependencies:
       '@aws-sdk/client-sso': 3.598.0
-      '@aws-sdk/token-providers': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0)
+      '@aws-sdk/token-providers': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0(@aws-sdk/client-sts@3.598.0))
       '@aws-sdk/types': 3.598.0
       '@smithy/property-provider': 3.1.1
       '@smithy/shared-ini-file-loader': 3.1.1
@@ -5232,9 +5232,9 @@ snapshots:
       - '@aws-sdk/client-sso-oidc'
       - aws-crt
 
-  '@aws-sdk/credential-provider-web-identity@3.598.0(@aws-sdk/client-sts@3.598.0(@aws-sdk/client-sso-oidc@3.598.0))':
+  '@aws-sdk/credential-provider-web-identity@3.598.0(@aws-sdk/client-sts@3.598.0)':
     dependencies:
-      '@aws-sdk/client-sts': 3.598.0(@aws-sdk/client-sso-oidc@3.598.0)
+      '@aws-sdk/client-sts': 3.598.0
       '@aws-sdk/types': 3.598.0
       '@smithy/property-provider': 3.1.1
       '@smithy/types': 3.1.0
@@ -5359,9 +5359,9 @@ snapshots:
       '@smithy/types': 3.1.0
       tslib: 2.6.2
 
-  '@aws-sdk/token-providers@3.598.0(@aws-sdk/client-sso-oidc@3.598.0)':
+  '@aws-sdk/token-providers@3.598.0(@aws-sdk/client-sso-oidc@3.598.0(@aws-sdk/client-sts@3.598.0))':
     dependencies:
-      '@aws-sdk/client-sso-oidc': 3.598.0
+      '@aws-sdk/client-sso-oidc': 3.598.0(@aws-sdk/client-sts@3.598.0)
       '@aws-sdk/types': 3.598.0
       '@smithy/property-provider': 3.1.1
       '@smithy/shared-ini-file-loader': 3.1.1
@@ -6017,7 +6017,7 @@ snapshots:
       graphql: 16.8.2
       tslib: 2.6.2
 
-  '@graphql-codegen/cli@5.0.2(@types/node@20.14.3)(graphql@16.8.2)':
+  '@graphql-codegen/cli@5.0.2(@types/node@20.14.4)(graphql@16.8.2)':
     dependencies:
       '@babel/generator': 7.23.6
       '@babel/template': 7.24.0
@@ -6028,12 +6028,12 @@ snapshots:
       '@graphql-tools/apollo-engine-loader': 8.0.0(graphql@16.8.2)
       '@graphql-tools/code-file-loader': 8.1.0(graphql@16.8.2)
       '@graphql-tools/git-loader': 8.0.4(graphql@16.8.2)
-      '@graphql-tools/github-loader': 8.0.0(@types/node@20.14.3)(graphql@16.8.2)
+      '@graphql-tools/github-loader': 8.0.0(@types/node@20.14.4)(graphql@16.8.2)
       '@graphql-tools/graphql-file-loader': 8.0.0(graphql@16.8.2)
       '@graphql-tools/json-file-loader': 8.0.0(graphql@16.8.2)
       '@graphql-tools/load': 8.0.1(graphql@16.8.2)
-      '@graphql-tools/prisma-loader': 8.0.2(@types/node@20.14.3)(graphql@16.8.2)
-      '@graphql-tools/url-loader': 8.0.1(@types/node@20.14.3)(graphql@16.8.2)
+      '@graphql-tools/prisma-loader': 8.0.2(@types/node@20.14.4)(graphql@16.8.2)
+      '@graphql-tools/url-loader': 8.0.1(@types/node@20.14.4)(graphql@16.8.2)
       '@graphql-tools/utils': 10.2.2(graphql@16.8.2)
       '@whatwg-node/fetch': 0.8.8
       chalk: 4.1.2
@@ -6041,7 +6041,7 @@ snapshots:
       debounce: 1.2.1
       detect-indent: 6.1.0
       graphql: 16.8.2
-      graphql-config: 5.0.3(@types/node@20.14.3)(graphql@16.8.2)
+      graphql-config: 5.0.3(@types/node@20.14.4)(graphql@16.8.2)
       inquirer: 8.2.6
       is-glob: 4.0.3
       jiti: 1.21.0
@@ -6184,7 +6184,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@graphql-eslint/eslint-plugin@3.20.1(@babel/core@7.24.3)(@types/node@20.14.3)(graphql@16.8.2)':
+  '@graphql-eslint/eslint-plugin@3.20.1(@babel/core@7.24.3)(@types/node@20.14.4)(graphql@16.8.2)':
     dependencies:
       '@babel/code-frame': 7.23.5
       '@graphql-tools/code-file-loader': 7.3.23(@babel/core@7.24.3)(graphql@16.8.2)
@@ -6194,7 +6194,7 @@ snapshots:
       debug: 4.3.4
       fast-glob: 3.3.2
       graphql: 16.8.2
-      graphql-config: 4.5.0(@types/node@20.14.3)(graphql@16.8.2)
+      graphql-config: 4.5.0(@types/node@20.14.4)(graphql@16.8.2)
       graphql-depth-limit: 1.1.0(graphql@16.8.2)
       lodash.lowercase: 4.3.0
       tslib: 2.6.2
@@ -6310,7 +6310,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@graphql-tools/executor-http@0.1.10(@types/node@20.14.3)(graphql@16.8.2)':
+  '@graphql-tools/executor-http@0.1.10(@types/node@20.14.4)(graphql@16.8.2)':
     dependencies:
       '@graphql-tools/utils': 9.2.1(graphql@16.8.2)
       '@repeaterjs/repeater': 3.0.5
@@ -6318,20 +6318,20 @@ snapshots:
       dset: 3.1.3
       extract-files: 11.0.0
       graphql: 16.8.2
-      meros: 1.3.0(@types/node@20.14.3)
+      meros: 1.3.0(@types/node@20.14.4)
       tslib: 2.6.2
       value-or-promise: 1.0.12
     transitivePeerDependencies:
       - '@types/node'
 
-  '@graphql-tools/executor-http@1.0.9(@types/node@20.14.3)(graphql@16.8.2)':
+  '@graphql-tools/executor-http@1.0.9(@types/node@20.14.4)(graphql@16.8.2)':
     dependencies:
       '@graphql-tools/utils': 10.2.2(graphql@16.8.2)
       '@repeaterjs/repeater': 3.0.5
       '@whatwg-node/fetch': 0.9.15
       extract-files: 11.0.0
       graphql: 16.8.2
-      meros: 1.3.0(@types/node@20.14.3)
+      meros: 1.3.0(@types/node@20.14.4)
       tslib: 2.6.2
       value-or-promise: 1.0.12
     transitivePeerDependencies:
@@ -6391,10 +6391,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@graphql-tools/github-loader@8.0.0(@types/node@20.14.3)(graphql@16.8.2)':
+  '@graphql-tools/github-loader@8.0.0(@types/node@20.14.4)(graphql@16.8.2)':
     dependencies:
       '@ardatan/sync-fetch': 0.0.1
-      '@graphql-tools/executor-http': 1.0.9(@types/node@20.14.3)(graphql@16.8.2)
+      '@graphql-tools/executor-http': 1.0.9(@types/node@20.14.4)(graphql@16.8.2)
       '@graphql-tools/graphql-tag-pluck': 8.2.0(graphql@16.8.2)
       '@graphql-tools/utils': 10.2.2(graphql@16.8.2)
       '@whatwg-node/fetch': 0.9.15
@@ -6513,9 +6513,9 @@ snapshots:
       graphql: 16.8.2
       tslib: 2.6.2
 
-  '@graphql-tools/prisma-loader@8.0.2(@types/node@20.14.3)(graphql@16.8.2)':
+  '@graphql-tools/prisma-loader@8.0.2(@types/node@20.14.4)(graphql@16.8.2)':
     dependencies:
-      '@graphql-tools/url-loader': 8.0.1(@types/node@20.14.3)(graphql@16.8.2)
+      '@graphql-tools/url-loader': 8.0.1(@types/node@20.14.4)(graphql@16.8.2)
       '@graphql-tools/utils': 10.2.2(graphql@16.8.2)
       '@types/js-yaml': 4.0.9
       '@types/json-stable-stringify': 1.0.36
@@ -6567,12 +6567,12 @@ snapshots:
       tslib: 2.6.2
       value-or-promise: 1.0.12
 
-  '@graphql-tools/url-loader@7.17.18(@types/node@20.14.3)(graphql@16.8.2)':
+  '@graphql-tools/url-loader@7.17.18(@types/node@20.14.4)(graphql@16.8.2)':
     dependencies:
       '@ardatan/sync-fetch': 0.0.1
       '@graphql-tools/delegate': 9.0.35(graphql@16.8.2)
       '@graphql-tools/executor-graphql-ws': 0.0.14(graphql@16.8.2)
-      '@graphql-tools/executor-http': 0.1.10(@types/node@20.14.3)(graphql@16.8.2)
+      '@graphql-tools/executor-http': 0.1.10(@types/node@20.14.4)(graphql@16.8.2)
       '@graphql-tools/executor-legacy-ws': 0.0.11(graphql@16.8.2)
       '@graphql-tools/utils': 9.2.1(graphql@16.8.2)
       '@graphql-tools/wrap': 9.4.2(graphql@16.8.2)
@@ -6589,12 +6589,12 @@ snapshots:
       - encoding
       - utf-8-validate
 
-  '@graphql-tools/url-loader@8.0.1(@types/node@20.14.3)(graphql@16.8.2)':
+  '@graphql-tools/url-loader@8.0.1(@types/node@20.14.4)(graphql@16.8.2)':
     dependencies:
       '@ardatan/sync-fetch': 0.0.1
       '@graphql-tools/delegate': 10.0.3(graphql@16.8.2)
       '@graphql-tools/executor-graphql-ws': 1.1.0(graphql@16.8.2)
-      '@graphql-tools/executor-http': 1.0.9(@types/node@20.14.3)(graphql@16.8.2)
+      '@graphql-tools/executor-http': 1.0.9(@types/node@20.14.4)(graphql@16.8.2)
       '@graphql-tools/executor-legacy-ws': 1.0.5(graphql@16.8.2)
       '@graphql-tools/utils': 10.2.2(graphql@16.8.2)
       '@graphql-tools/wrap': 10.0.1(graphql@16.8.2)
@@ -7224,15 +7224,15 @@ snapshots:
   '@types/body-parser@1.19.5':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
 
   '@types/cors@2.8.17':
     dependencies:
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
 
   '@types/d3-scale-chromatic@3.0.3': {}
 
@@ -7248,20 +7248,20 @@ snapshots:
 
   '@types/docker-modem@3.0.6':
     dependencies:
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
       '@types/ssh2': 1.11.19
 
   '@types/dockerode@3.3.28':
     dependencies:
       '@types/docker-modem': 3.0.6
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
       '@types/ssh2': 1.11.19
 
   '@types/estree@1.0.5': {}
 
   '@types/express-serve-static-core@4.17.41':
     dependencies:
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
       '@types/qs': 6.9.11
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
@@ -7293,7 +7293,7 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@20.14.3':
+  '@types/node@20.14.4':
     dependencies:
       undici-types: 5.26.5
 
@@ -7304,21 +7304,21 @@ snapshots:
   '@types/send@0.17.4':
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
 
   '@types/serve-static@1.15.5':
     dependencies:
       '@types/http-errors': 2.0.4
       '@types/mime': 3.0.4
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
 
   '@types/ssh2-streams@0.1.12':
     dependencies:
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
 
   '@types/ssh2@0.5.52':
     dependencies:
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
       '@types/ssh2-streams': 0.1.12
 
   '@types/ssh2@1.11.19':
@@ -7329,11 +7329,11 @@ snapshots:
 
   '@types/ws@8.5.10':
     dependencies:
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
     optional: true
 
   '@typescript-eslint/eslint-plugin@7.13.1(@typescript-eslint/parser@7.13.1(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)':
@@ -7419,7 +7419,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitest/coverage-istanbul@1.6.0(vitest@1.6.0(@types/node@20.14.3))':
+  '@vitest/coverage-istanbul@1.6.0(vitest@1.6.0(@types/node@20.14.4))':
     dependencies:
       debug: 4.3.4
       istanbul-lib-coverage: 3.2.2
@@ -7430,7 +7430,7 @@ snapshots:
       magicast: 0.3.3
       picocolors: 1.0.0
       test-exclude: 6.0.0
-      vitest: 1.6.0(@types/node@20.14.3)
+      vitest: 1.6.0(@types/node@20.14.4)
     transitivePeerDependencies:
       - supports-color
 
@@ -8815,13 +8815,13 @@ snapshots:
 
   graphemer@1.4.0: {}
 
-  graphql-config@4.5.0(@types/node@20.14.3)(graphql@16.8.2):
+  graphql-config@4.5.0(@types/node@20.14.4)(graphql@16.8.2):
     dependencies:
       '@graphql-tools/graphql-file-loader': 7.5.17(graphql@16.8.2)
       '@graphql-tools/json-file-loader': 7.4.18(graphql@16.8.2)
       '@graphql-tools/load': 7.8.14(graphql@16.8.2)
       '@graphql-tools/merge': 8.4.2(graphql@16.8.2)
-      '@graphql-tools/url-loader': 7.17.18(@types/node@20.14.3)(graphql@16.8.2)
+      '@graphql-tools/url-loader': 7.17.18(@types/node@20.14.4)(graphql@16.8.2)
       '@graphql-tools/utils': 9.2.1(graphql@16.8.2)
       cosmiconfig: 8.0.0
       graphql: 16.8.2
@@ -8835,13 +8835,13 @@ snapshots:
       - encoding
       - utf-8-validate
 
-  graphql-config@5.0.3(@types/node@20.14.3)(graphql@16.8.2):
+  graphql-config@5.0.3(@types/node@20.14.4)(graphql@16.8.2):
     dependencies:
       '@graphql-tools/graphql-file-loader': 8.0.0(graphql@16.8.2)
       '@graphql-tools/json-file-loader': 8.0.0(graphql@16.8.2)
       '@graphql-tools/load': 8.0.1(graphql@16.8.2)
       '@graphql-tools/merge': 9.0.1(graphql@16.8.2)
-      '@graphql-tools/url-loader': 8.0.1(@types/node@20.14.3)(graphql@16.8.2)
+      '@graphql-tools/url-loader': 8.0.1(@types/node@20.14.4)(graphql@16.8.2)
       '@graphql-tools/utils': 10.2.2(graphql@16.8.2)
       cosmiconfig: 8.1.3
       graphql: 16.8.2
@@ -9404,9 +9404,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  meros@1.3.0(@types/node@20.14.3):
+  meros@1.3.0(@types/node@20.14.4):
     optionalDependencies:
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
 
   methods@1.1.2: {}
 
@@ -10517,13 +10517,13 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-node@1.6.0(@types/node@20.14.3):
+  vite-node@1.6.0(@types/node@20.14.4):
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
       pathe: 1.1.1
       picocolors: 1.0.0
-      vite: 5.2.8(@types/node@20.14.3)
+      vite: 5.2.8(@types/node@20.14.4)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -10534,27 +10534,27 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@4.3.2(typescript@5.4.5)(vite@5.2.8(@types/node@20.14.3)):
+  vite-tsconfig-paths@4.3.2(typescript@5.4.5)(vite@5.2.8(@types/node@20.14.4)):
     dependencies:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 3.0.3(typescript@5.4.5)
     optionalDependencies:
-      vite: 5.2.8(@types/node@20.14.3)
+      vite: 5.2.8(@types/node@20.14.4)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@5.2.8(@types/node@20.14.3):
+  vite@5.2.8(@types/node@20.14.4):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.14.0
     optionalDependencies:
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
       fsevents: 2.3.3
 
-  vitest@1.6.0(@types/node@20.14.3):
+  vitest@1.6.0(@types/node@20.14.4):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -10573,11 +10573,11 @@ snapshots:
       strip-literal: 2.0.0
       tinybench: 2.5.1
       tinypool: 0.8.4
-      vite: 5.2.8(@types/node@20.14.3)
-      vite-node: 1.6.0(@types/node@20.14.3)
+      vite: 5.2.8(@types/node@20.14.4)
+      vite-node: 1.6.0(@types/node@20.14.4)
       why-is-node-running: 2.2.2
     optionalDependencies:
-      '@types/node': 20.14.3
+      '@types/node': 20.14.4
     transitivePeerDependencies:
       - less
       - lightningcss
