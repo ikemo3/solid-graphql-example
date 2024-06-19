@@ -16,15 +16,12 @@
       "versioningTemplate": "node"
     }
   ],
-  "packageRules": [
-    {
-      "matchUpdateTypes": "patch",
-      "groupName": "dependencies patch",
-      "automerge": true
-    }
-  ],
+  "patch": {
+    "automerge": true
+  },
   "minor": {
-    "schedule": ["every weekend"]
+    "schedule": ["every weekend"],
+    "automerge": true
   },
   "major": {
     "dependencyDashboardApproval": true
