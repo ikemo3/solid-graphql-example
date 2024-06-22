@@ -72,7 +72,7 @@
     "prettier": "^3.3.2",
     "prisma-erd-generator": "^1.11.2",
     "sort-package-json": "^2.10.0",
-    "testcontainers": "^10.9.0",
+    "testcontainers": "^10.10.0",
     "typescript": "^5.4.5",
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.6.0"
