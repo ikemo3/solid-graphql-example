@@ -39,8 +39,8 @@ importers:
         specifier: ^0.13.6
         version: 0.13.6(solid-js@1.8.17)
       '@tanker/file-reader':
-        specifier: ^4.1.1
-        version: 4.1.1
+        specifier: ^4.2.0
+        version: 4.2.0
       '@thisbeyond/solid-dnd':
         specifier: ^0.7.5
         version: 0.7.5(solid-js@1.8.17)
@@ -1257,11 +1257,11 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
-  '@tanker/file-reader@4.1.1':
-    resolution: {integrity: sha512-vYQAkO7jApu5H2Omck8NufQsLX2kQ3A3mMBd3npFI+1PEwmKT+/SgR5GkUCrFbMIvl7t1Gclk/woMwt2klsypg==}
+  '@tanker/file-reader@4.2.0':
+    resolution: {integrity: sha512-MVV+y9BMpJVwcBYa6Gleyczy2VaqtlslMsGvhWv5XdXp+2M+dmzqTUj7WKeeqsZXH7Pj1F/ylaEg8P9w+YhnyQ==}
 
-  '@tanker/global-this@4.1.1':
-    resolution: {integrity: sha512-miRbnTF0q7ZxsoeSQQlnTdbJ77wLPW+YgW9kfsd9FB51LXyONd6vvugNF2lg/smqO74CQa0kzUl0ePr20qSMng==}
+  '@tanker/global-this@4.2.0':
+    resolution: {integrity: sha512-DTnep18eedFfCJYTFWw4sot+0elyaSRDpNV0UvXrYSpO45xm9nEWVb4VQ5D7HZY4DvW8eHoyCIiegC4OccWiDw==}
 
   '@testing-library/dom@10.1.0':
     resolution: {integrity: sha512-wdsYKy5zupPyLCW2Je5DLHSxSfbIp6h80WoHOQc+RPtmPGA52O9x5MJEkv92Sjonpq+poOAtUKhh1kBGAXBrNA==}
@@ -5487,12 +5487,12 @@ snapshots:
       postcss-selector-parser: 6.0.10
       tailwindcss: 3.4.4
 
-  '@tanker/file-reader@4.1.1':
+  '@tanker/file-reader@4.2.0':
     dependencies:
-      '@tanker/global-this': 4.1.1
+      '@tanker/global-this': 4.2.0
       tslib: 2.6.2
 
-  '@tanker/global-this@4.1.1':
+  '@tanker/global-this@4.2.0':
     dependencies:
       '@sentry/types': 7.76.0
       tslib: 2.6.2
