@@ -40,7 +40,7 @@
     "@solid-primitives/clipboard": "^1.5.10",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.13.6",
-    "@tanker/file-reader": "^4.1.1",
+    "@tanker/file-reader": "^4.2.0",
     "@thisbeyond/solid-dnd": "^0.7.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
