@@ -31,7 +31,7 @@
     "@graphql-yoga/redis-event-target": "^3.0.1",
     "@pothos/core": "^3.41.2",
     "@pothos/plugin-prisma": "^3.65.3",
-    "@pothos/plugin-relay": "^3.46.0",
+    "@pothos/plugin-relay": "^3.46.1",
     "@pothos/plugin-scope-auth": "^3.22.1",
     "@prisma/client": "^5.15.1",
     "cors": "^2.8.5",
