@@ -30,8 +30,8 @@ importers:
         specifier: ^2.10.0
         version: 2.10.0
       tsx:
-        specifier: ^4.15.8
-        version: 4.15.8
+        specifier: ^4.15.9
+        version: 4.15.9
       yaml:
         specifier: ^2.4.5
         version: 2.4.5
@@ -908,8 +908,8 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
-  tsx@4.15.8:
-    resolution: {integrity: sha512-B8dMlbbkZPW0GQ7wafyy2TGXyoGYW0IURfWkM1h/WzgG5lxxRoeDU2VbMURmmjwGaCsoKROVTLmQQPe/s2TnLw==}
+  tsx@4.15.9:
+    resolution: {integrity: sha512-OEw8VSS5Ug88pj3YhOic1Zmg+mKOuJOcBdpxl402C0D4TjRxu/LTIrr+slbc8nKQA+b7YC9SoHTZAEeQQPBwFw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -1762,7 +1762,7 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
-  tsx@4.15.8:
+  tsx@4.15.9:
     dependencies:
       esbuild: 0.21.4
       get-tsconfig: 4.7.5
