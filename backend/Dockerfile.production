@@ -1,5 +1,5 @@
 # ベースイメージをビルド段階で使用
-FROM node:20.14.0-slim AS builder
+FROM node:20.15.0-slim AS builder
 
 # OpenSSLのインストール
 RUN apt-get update -y && apt-get install -y openssl
@@ -20,7 +20,7 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 RUN prisma generate --generator client
 
 # 本番用のベースイメージを使用
-FROM node:20.14.0-slim
+FROM node:20.15.0-slim
 
 # 作業ディレクトリを設定
 WORKDIR /usr/src/app
