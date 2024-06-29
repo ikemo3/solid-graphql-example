@@ -112,8 +112,8 @@ importers:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.38)
       dependency-cruiser:
-        specifier: ^16.3.3
-        version: 16.3.3
+        specifier: ^16.3.4
+        version: 16.3.4
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -1607,8 +1607,17 @@ packages:
     resolution: {integrity: sha512-cjkyv4OtNCIeqhHrfS81QWXoCBPExR/J62oyEqepVw8WaQeSqpW2uhuLPh1m9eWhDuOo/jUXVTlifvesOWp/4A==}
     engines: {node: '>=0.4.0'}
 
+  acorn-walk@8.3.3:
+    resolution: {integrity: sha512-MxXdReSRhGO7VlFe1bRG/oI7/mdLV9B9JJT0N8vZOhF7gFRR5l3M8W9G8JxmKV+JC5mGqJ0QvqfSOLsCPa4nUw==}
+    engines: {node: '>=0.4.0'}
+
   acorn@8.11.3:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  acorn@8.12.0:
+    resolution: {integrity: sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -1622,9 +1631,6 @@ packages:
 
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
-
-  ajv@8.13.0:
-    resolution: {integrity: sha512-PRA911Blj99jR5RMeTunVbNXMF6Lp4vZXnk5GQjcnUWUTsrXtekg/pnmFFI2u/I36Y/2bITGS30GZCXei6uNkA==}
 
   ajv@8.16.0:
     resolution: {integrity: sha512-F0twR8U1ZU67JIEtekUcLkXkoO5mMMmgGD8sK/xUFzJ805jxHQl92hImFAqqXMyMYjSPOyUPAwHYhB72g5sTXw==}
@@ -2025,8 +2031,8 @@ packages:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
 
-  dependency-cruiser@16.3.3:
-    resolution: {integrity: sha512-+YHPbd6RqM1nLUUbRVkbYO6mVeeq+VEL+bBkR+KFkYVU20vs1D0TalZ9z/hDLxiYiYCSTctUaoWWaUrRc1I+mw==}
+  dependency-cruiser@16.3.4:
+    resolution: {integrity: sha512-HEuF2BUzt7ZCG/Z3AuvqhdaYbON4zGb6TSLtJu3AlMzOX4lF3CX17wkL4l0G9pVK+8o6Ws93R0//XglES5Vhow==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -2269,10 +2275,6 @@ packages:
   figures@3.2.0:
     resolution: {integrity: sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==}
     engines: {node: '>=8'}
-
-  figures@6.1.0:
-    resolution: {integrity: sha512-d+l3qxjSesT4V7v2fh+QnmFnUWv9lSpjarhShNTgBOfA0ttejbQUAlHLitbjkoRiDulW0OPoQPYIGhIC8ohejg==}
-    engines: {node: '>=18'}
 
   file-entry-cache@6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
@@ -2549,10 +2551,6 @@ packages:
     resolution: {integrity: sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==}
     engines: {node: '>=8'}
 
-  indent-string@5.0.0:
-    resolution: {integrity: sha512-m6FAo/spmsW2Ab2fU35JTYwtOKa2yAwXSwgjSv1TJzh4Mh7mC3lzAOVLBprb72XsTrgkEIsl7YrFNAiDiRhIGg==}
-    engines: {node: '>=12'}
-
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
     deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
@@ -2674,10 +2672,6 @@ packages:
   is-unicode-supported@0.1.0:
     resolution: {integrity: sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==}
     engines: {node: '>=10'}
-
-  is-unicode-supported@2.0.0:
-    resolution: {integrity: sha512-FRdAyx5lusK1iHG0TWpVtk9+1i+GjrzRffhDg4ovQ7mcidMQ6mj+MhKPmvh7Xwyv5gIS06ns49CA7Sqg7lC22Q==}
-    engines: {node: '>=18'}
 
   is-upper-case@2.0.2:
     resolution: {integrity: sha512-44pxmxAvnnAOwBg4tHPnkfvgjPwbc5QIsSstNU+YcJ1ovxVzCWpSGosPJOZh/a1tdl81fbgnLc9LLv+x2ywbPQ==}
@@ -3587,10 +3581,6 @@ packages:
 
   scuid@1.1.0:
     resolution: {integrity: sha512-MuCAyrGZcTLfQoH2XoBlQ8C6bzwN88XT/0slOGz0pn8+gIP85BOAfYa44ZXQUTOwRwPU0QvgU+V+OSajl/59Xg==}
-
-  semver-try-require@7.0.0:
-    resolution: {integrity: sha512-LI7GzDuAZmNKOY0/LY4nB3ifh6kYMvBimFTHVpA6wNEl3gw59QrLbTAnJb7vQzPd1qXPz+BtKJZaYORXWMerrA==}
-    engines: {node: ^18.17||>=20}
 
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
@@ -5968,13 +5958,23 @@ snapshots:
     dependencies:
       acorn: 8.11.3
 
+  acorn-jsx@5.3.2(acorn@8.12.0):
+    dependencies:
+      acorn: 8.12.0
+
   acorn-loose@8.4.0:
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
 
   acorn-walk@8.3.2: {}
 
+  acorn-walk@8.3.3:
+    dependencies:
+      acorn: 8.12.0
+
   acorn@8.11.3: {}
+
+  acorn@8.12.0: {}
 
   agent-base@7.1.0:
     dependencies:
@@ -5992,13 +5992,6 @@ snapshots:
       fast-deep-equal: 3.1.3
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
-      uri-js: 4.4.1
-
-  ajv@8.13.0:
-    dependencies:
-      fast-deep-equal: 3.1.3
-      json-schema-traverse: 1.0.0
-      require-from-string: 2.0.2
       uri-js: 4.4.1
 
   ajv@8.16.0:
@@ -6431,20 +6424,18 @@ snapshots:
 
   delayed-stream@1.0.0: {}
 
-  dependency-cruiser@16.3.3:
+  dependency-cruiser@16.3.4:
     dependencies:
-      acorn: 8.11.3
-      acorn-jsx: 5.3.2(acorn@8.11.3)
+      acorn: 8.12.0
+      acorn-jsx: 5.3.2(acorn@8.12.0)
       acorn-jsx-walk: 2.0.0
       acorn-loose: 8.4.0
-      acorn-walk: 8.3.2
+      acorn-walk: 8.3.3
       ajv: 8.16.0
       chalk: 5.3.0
       commander: 12.1.0
       enhanced-resolve: 5.17.0
-      figures: 6.1.0
       ignore: 5.3.1
-      indent-string: 5.0.0
       interpret: 3.1.1
       is-installed-globally: 1.0.0
       json5: 2.2.3
@@ -6455,7 +6446,6 @@ snapshots:
       rechoir: 0.8.0
       safe-regex: 2.1.1
       semver: 7.6.2
-      semver-try-require: 7.0.0
       teamcity-service-messages: 0.1.14
       tsconfig-paths-webpack-plugin: 4.1.0
       watskeburt: 4.0.2
@@ -6780,10 +6770,6 @@ snapshots:
     dependencies:
       escape-string-regexp: 1.0.5
 
-  figures@6.1.0:
-    dependencies:
-      is-unicode-supported: 2.0.0
-
   file-entry-cache@6.0.1:
     dependencies:
       flat-cache: 3.2.0
@@ -7100,8 +7086,6 @@ snapshots:
 
   indent-string@4.0.0: {}
 
-  indent-string@5.0.0: {}
-
   inflight@1.0.6:
     dependencies:
       once: 1.4.0
@@ -7215,8 +7199,6 @@ snapshots:
       unc-path-regex: 0.1.2
 
   is-unicode-supported@0.1.0: {}
-
-  is-unicode-supported@2.0.0: {}
 
   is-upper-case@2.0.2:
     dependencies:
@@ -8317,10 +8299,6 @@ snapshots:
 
   scuid@1.1.0: {}
 
-  semver-try-require@7.0.0:
-    dependencies:
-      semver: 7.6.2
-
   semver@6.3.1: {}
 
   semver@7.6.0:
@@ -8546,7 +8524,7 @@ snapshots:
 
   table@6.8.2:
     dependencies:
-      ajv: 8.13.0
+      ajv: 8.16.0
       lodash.truncate: 4.4.2
       slice-ansi: 4.0.0
       string-width: 4.2.3
