@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload to GitHub Packages
-        uses: docker/bake-action@v4
+        uses: docker/bake-action@v5
         env:
           OWNER: ${{ github.repository_owner }}
           REPOSITORY_NAME: ${{ steps.repository.outputs.name }}
