@@ -49,7 +49,7 @@
   "devDependencies": {
     "@escape.tech/graphql-armor-types": "^0.6.0",
     "@graphql-codegen/cli": "^5.0.2",
-    "@graphql-codegen/client-preset": "^4.3.1",
+    "@graphql-codegen/client-preset": "^4.3.2",
     "@graphql-eslint/eslint-plugin": "^3.20.1",
     "@graphql-tools/executor-http": "^1.0.9",
     "@graphql-tools/utils": "^10.2.3",
