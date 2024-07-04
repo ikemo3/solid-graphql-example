@@ -73,7 +73,7 @@
     "eslint-plugin-tailwindcss": "^3.17.4",
     "jsdom": "^24.1.0",
     "nginx-linter": "^0.7.0",
-    "npm-run-all2": "^6.2.1",
+    "npm-run-all2": "^6.2.2",
     "postcss": "^8.4.39",
     "prettier": "^3.3.2",
     "remark-emoji": "^4.0.1",
