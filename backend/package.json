@@ -68,7 +68,7 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "execa": "^9.3.0",
     "graphql-schema-linter": "^3.0.1",
-    "npm-run-all2": "^6.2.1",
+    "npm-run-all2": "^6.2.2",
     "prettier": "^3.3.2",
     "prisma-erd-generator": "^1.11.2",
     "sort-package-json": "^2.10.0",
