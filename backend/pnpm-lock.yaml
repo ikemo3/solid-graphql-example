@@ -15,8 +15,8 @@ importers:
         specifier: ^3.606.0
         version: 3.606.0
       '@escape.tech/graphql-armor':
-        specifier: ^3.0.0
-        version: 3.0.0(@envelop/core@5.0.0)(@escape.tech/graphql-armor-types@0.6.0)
+        specifier: ^3.0.1
+        version: 3.0.1(@envelop/core@5.0.0)(@escape.tech/graphql-armor-types@0.6.0)
       '@graphql-yoga/plugin-disable-introspection':
         specifier: ^2.5.0
         version: 2.5.0(graphql-yoga@5.5.0(graphql@16.9.0))(graphql@16.9.0)
@@ -959,8 +959,8 @@ packages:
     resolution: {integrity: sha512-26y2WOg7tTtgGthbmGF1HEIhyG+MCTmf6Kzk5uEbNKE6ct+RV/VwNXs8mb0DJPc3xpYHtnJWO8NiJMVRDre6Sw==}
     engines: {node: '>=18.0.0'}
 
-  '@escape.tech/graphql-armor-max-aliases@2.4.0':
-    resolution: {integrity: sha512-d4V9EgtPRG9HIoPHuanFNLHj1ENB1YkZi9FbiBiH88x5VahCjVpMXDgKQGkG6RUTOODU4XKp0/ZgaOq0pX5oEA==}
+  '@escape.tech/graphql-armor-max-aliases@2.5.0':
+    resolution: {integrity: sha512-deaLZF3ASfJY9jUbBzoZW9IUHWqAVorpDR9Yez4mxk8iFltwCpgtJfVEb57T+R0RyiFrtjdUM5SQpNZJxhie7w==}
     engines: {node: '>=18.0.0'}
 
   '@escape.tech/graphql-armor-max-depth@2.3.0':
@@ -978,8 +978,8 @@ packages:
   '@escape.tech/graphql-armor-types@0.6.0':
     resolution: {integrity: sha512-Y3X6JgkB1N1MMaHNXaE2IeJWIs6wT4XcPvXM8PRWmT2DblZfY4NYiV1mh0GTInKdlnrEr5hquOR9XV+M3Da43w==}
 
-  '@escape.tech/graphql-armor@3.0.0':
-    resolution: {integrity: sha512-wI21VK7Hhfnw1Q6ulLE5/gi2/gNLmaM/xJKeVAlcZje70TUL8rhIi1POzOmj5kX53LnEdvHSY+24qJ/hcHN5MQ==}
+  '@escape.tech/graphql-armor@3.0.1':
+    resolution: {integrity: sha512-NdlpdFojylmze1uXSzQ1gcOXy3mSAMIoftNe1wh5tBSyyeHxpiGb0AUpL7VlfOqe1UXilCX+3xr1vAHburrNDA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@apollo/server': ^4.0.0
@@ -5949,7 +5949,7 @@ snapshots:
       '@envelop/core': 5.0.0
       '@escape.tech/graphql-armor-types': 0.6.0
 
-  '@escape.tech/graphql-armor-max-aliases@2.4.0':
+  '@escape.tech/graphql-armor-max-aliases@2.5.0':
     dependencies:
       graphql: 16.9.0
     optionalDependencies:
@@ -5981,11 +5981,11 @@ snapshots:
     dependencies:
       graphql: 16.9.0
 
-  '@escape.tech/graphql-armor@3.0.0(@envelop/core@5.0.0)(@escape.tech/graphql-armor-types@0.6.0)':
+  '@escape.tech/graphql-armor@3.0.1(@envelop/core@5.0.0)(@escape.tech/graphql-armor-types@0.6.0)':
     dependencies:
       '@escape.tech/graphql-armor-block-field-suggestions': 2.2.0
       '@escape.tech/graphql-armor-cost-limit': 2.2.0
-      '@escape.tech/graphql-armor-max-aliases': 2.4.0
+      '@escape.tech/graphql-armor-max-aliases': 2.5.0
       '@escape.tech/graphql-armor-max-depth': 2.3.0
       '@escape.tech/graphql-armor-max-directives': 2.2.0
       '@escape.tech/graphql-armor-max-tokens': 2.4.0
