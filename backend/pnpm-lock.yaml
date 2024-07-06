@@ -19,7 +19,7 @@ importers:
         version: 3.0.1(@envelop/core@5.0.0)(@escape.tech/graphql-armor-types@0.6.0)
       '@graphql-yoga/plugin-disable-introspection':
         specifier: ^2.6.0
-        version: 2.6.0(graphql-yoga@5.5.0(graphql@16.9.0))(graphql@16.9.0)
+        version: 2.6.0(graphql-yoga@5.6.0(graphql@16.9.0))(graphql@16.9.0)
       '@graphql-yoga/redis-event-target':
         specifier: ^3.0.1
         version: 3.0.1(ioredis@5.4.1)
@@ -57,8 +57,8 @@ importers:
         specifier: ^1.23.0
         version: 1.23.0(graphql@16.9.0)
       graphql-yoga:
-        specifier: ^5.5.0
-        version: 5.5.0(graphql@16.9.0)
+        specifier: ^5.6.0
+        version: 5.6.0(graphql@16.9.0)
       helmet:
         specifier: ^7.1.0
         version: 7.1.0
@@ -3120,8 +3120,8 @@ packages:
     peerDependencies:
       graphql: '>=0.11 <=16'
 
-  graphql-yoga@5.5.0:
-    resolution: {integrity: sha512-GrF1GfR5RJb/iHEcRQakXSSoqXb2dgGa0UCU0CXsfYnuUstSog6nF5oCUKlXz1UnFbpNAlVhU++rd088S4VAtg==}
+  graphql-yoga@5.6.0:
+    resolution: {integrity: sha512-MqzHRPmiMSilYLDbJtAnXN7oyggd446a4F9dyj/H4gCmM/3YllCYw3vtKcmsykorsfiSKCYpCf5CimNXIVaHHg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       graphql: ^15.2.0 || ^16.0.0
@@ -6646,10 +6646,10 @@ snapshots:
     dependencies:
       tslib: 2.6.2
 
-  '@graphql-yoga/plugin-disable-introspection@2.6.0(graphql-yoga@5.5.0(graphql@16.9.0))(graphql@16.9.0)':
+  '@graphql-yoga/plugin-disable-introspection@2.6.0(graphql-yoga@5.6.0(graphql@16.9.0))(graphql@16.9.0)':
     dependencies:
       graphql: 16.9.0
-      graphql-yoga: 5.5.0(graphql@16.9.0)
+      graphql-yoga: 5.6.0(graphql@16.9.0)
 
   '@graphql-yoga/redis-event-target@3.0.1(ioredis@5.4.1)':
     dependencies:
@@ -8882,7 +8882,7 @@ snapshots:
     dependencies:
       graphql: 16.9.0
 
-  graphql-yoga@5.5.0(graphql@16.9.0):
+  graphql-yoga@5.6.0(graphql@16.9.0):
     dependencies:
       '@envelop/core': 5.0.0
       '@graphql-tools/executor': 1.2.6(graphql@16.9.0)
