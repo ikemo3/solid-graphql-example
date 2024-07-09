@@ -18,8 +18,8 @@ importers:
         specifier: ^1.0.17
         version: 1.0.17(zod@3.23.8)
       '@generouted/solid-router':
-        specifier: ^1.19.5
-        version: 1.19.5(@solidjs/router@0.13.6(solid-js@1.8.18))(solid-js@1.8.18)(vite@5.3.3(@types/node@20.11.10))
+        specifier: ^1.19.6
+        version: 1.19.6(@solidjs/router@0.13.6(solid-js@1.8.18))(solid-js@1.8.18)(vite@5.3.3(@types/node@20.11.10))
       '@graphql-typed-document-node/core':
         specifier: ^3.2.0
         version: 3.2.0(graphql@16.9.0)
@@ -687,8 +687,8 @@ packages:
   '@floating-ui/utils@0.2.1':
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
 
-  '@generouted/solid-router@1.19.5':
-    resolution: {integrity: sha512-P9lDPIXJBX2+Q/3DkCN8nsAKz2TEkQWq7GmJ7/V7ksEjD66HSu/6IdsmzIjzQ8WoF2w7sOckoPus2P2EsYx1Gg==}
+  '@generouted/solid-router@1.19.6':
+    resolution: {integrity: sha512-wUICLVuBZoo0cnTG8fqC9IS2etSM298PilEpeuN9xGl0e3opxo/5soPy/1MHgKSXbd07gg1OI4/r13KK6qMC9g==}
     peerDependencies:
       '@solidjs/router': '>=0.8'
       solid-js: '>=1'
@@ -2201,8 +2201,8 @@ packages:
   function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
 
-  generouted@1.19.5:
-    resolution: {integrity: sha512-hts4B0UhYzPKGmGsGhkbCclcZWAeTe3EKW6oLY4tfXMj/A/wk/QTzeYgJqHL9dJd5d0E8vUoqpV6TucH50I9Rw==}
+  generouted@1.19.6:
+    resolution: {integrity: sha512-IkeOH3vnPlG9dLrF3NGC0G6aG8185MTjvMiR5Vzlx9Ztz3VoHJrO2LCen/g/kCBBB3gzD6qqxcdWdKws/bYndA==}
     peerDependencies:
       vite: '>=3'
 
@@ -4670,11 +4670,11 @@ snapshots:
 
   '@floating-ui/utils@0.2.1': {}
 
-  '@generouted/solid-router@1.19.5(@solidjs/router@0.13.6(solid-js@1.8.18))(solid-js@1.8.18)(vite@5.3.3(@types/node@20.11.10))':
+  '@generouted/solid-router@1.19.6(@solidjs/router@0.13.6(solid-js@1.8.18))(solid-js@1.8.18)(vite@5.3.3(@types/node@20.11.10))':
     dependencies:
       '@solidjs/router': 0.13.6(solid-js@1.8.18)
       fast-glob: 3.3.2
-      generouted: 1.19.5(vite@5.3.3(@types/node@20.11.10))
+      generouted: 1.19.6(vite@5.3.3(@types/node@20.11.10))
       solid-js: 1.8.18
       vite: 5.3.3(@types/node@20.11.10)
 
@@ -6640,7 +6640,7 @@ snapshots:
 
   function-bind@1.1.2: {}
 
-  generouted@1.19.5(vite@5.3.3(@types/node@20.11.10)):
+  generouted@1.19.6(vite@5.3.3(@types/node@20.11.10)):
     dependencies:
       vite: 5.3.3(@types/node@20.11.10)
 
