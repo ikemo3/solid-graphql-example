@@ -1,5 +1,5 @@
 # ベースイメージをビルド段階で使用
-FROM node:20.15.0-slim AS builder
+FROM node:20.15.1-slim AS builder
 
 # 作業ディレクトリを設定
 WORKDIR /usr/src/app
