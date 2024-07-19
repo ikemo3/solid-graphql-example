@@ -60,8 +60,8 @@ importers:
         specifier: ^2.5.3
         version: 2.5.3(graphql@16.9.0)
       i18next:
-        specifier: ^23.12.1
-        version: 23.12.1
+        specifier: ^23.12.2
+        version: 23.12.2
       initials:
         specifier: ^3.1.2
         version: 3.1.2
@@ -82,7 +82,7 @@ importers:
         version: 3.23.8
       zod-i18n-map:
         specifier: ^2.27.0
-        version: 2.27.0(i18next@23.12.1)(zod@3.23.8)
+        version: 2.27.0(i18next@23.12.2)(zod@3.23.8)
     devDependencies:
       '@graphql-codegen/cli':
         specifier: ^5.0.2
@@ -2387,8 +2387,8 @@ packages:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
 
-  i18next@23.12.1:
-    resolution: {integrity: sha512-l4y291ZGRgUhKuqVSiqyuU2DDzxKStlIWSaoNBR4grYmh0X+pRYbFpTMs3CnJ5ECKbOI8sQcJ3PbTUfLgPRaMA==}
+  i18next@23.12.2:
+    resolution: {integrity: sha512-XIeh5V+bi8SJSWGL3jqbTEBW5oD6rbP5L+E7dVQh1MNTxxYef0x15rhJVcRb7oiuq4jLtgy2SD8eFlf6P2cmqg==}
 
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
@@ -6865,7 +6865,7 @@ snapshots:
 
   human-signals@5.0.0: {}
 
-  i18next@23.12.1:
+  i18next@23.12.2:
     dependencies:
       '@babel/runtime': 7.24.4
 
@@ -8789,9 +8789,9 @@ snapshots:
 
   yocto-queue@1.0.0: {}
 
-  zod-i18n-map@2.27.0(i18next@23.12.1)(zod@3.23.8):
+  zod-i18n-map@2.27.0(i18next@23.12.2)(zod@3.23.8):
     dependencies:
-      i18next: 23.12.1
+      i18next: 23.12.2
       zod: 3.23.8
 
   zod@3.23.8: {}
