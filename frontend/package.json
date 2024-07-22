@@ -61,7 +61,7 @@
     "@graphql-codegen/client-preset": "^4.3.2",
     "@solidjs/testing-library": "^0.8.9",
     "@tailwindcss/typography": "^0.5.13",
-    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/jest-dom": "^6.4.7",
     "@typescript-eslint/eslint-plugin": "^7.16.1",
     "@typescript-eslint/parser": "^7.16.1",
     "@vitest/coverage-istanbul": "^1.6.0",
