@@ -112,8 +112,8 @@ importers:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.39)
       dependency-cruiser:
-        specifier: ^16.3.9
-        version: 16.3.9
+        specifier: ^16.3.10
+        version: 16.3.10
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -1894,8 +1894,8 @@ packages:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
 
-  dependency-cruiser@16.3.9:
-    resolution: {integrity: sha512-rtYBXmwYGcuwvGHI+gqXMyXXKjJ3d8nfg6hdwOtgm3Z7VHczuDwUJTg1PDQNzhWLWjMKzV5igAIpuxXOhslyZA==}
+  dependency-cruiser@16.3.10:
+    resolution: {integrity: sha512-WkCnibHBfvaiaQ+S46LZ6h4AR6oj42Vsf5/0Vgtrwdwn7ZekMJdZ/ALoTwNp/RaGlKW+MbV/fhSZOvmhAWVWzQ==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -1975,8 +1975,8 @@ packages:
   emoticon@4.0.1:
     resolution: {integrity: sha512-dqx7eA9YaqyvYtUhJwT4rC1HIp82j5ybS1/vQ42ur+jBe17dJMwZE4+gvL1XadSFfxaPFFGt3Xsw+Y8akThDlw==}
 
-  enhanced-resolve@5.17.0:
-    resolution: {integrity: sha512-dwDPwZL0dmye8Txp2gzFmA6sxALaSvdRDjPH0viLcKrtlOL3tw62nWWweVD1SdILDTJrbrL6tdWVN58Wo6U3eA==}
+  enhanced-resolve@5.17.1:
+    resolution: {integrity: sha512-LMHl3dXhTcfv8gM4kEzIUeTQ+7fpdA0l2tUf34BddXPkz2A5xJ5L/Pchd5BL6rdccM9QGvu0sWZzK1Z1t4wwyg==}
     engines: {node: '>=10.13.0'}
 
   entities@4.5.0:
@@ -3445,11 +3445,6 @@ packages:
 
   semver@7.6.0:
     resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
-    engines: {node: '>=10'}
-    hasBin: true
-
-  semver@7.6.2:
-    resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -5652,7 +5647,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.4
-      semver: 7.6.2
+      semver: 7.6.3
       ts-api-utils: 1.3.0(typescript@5.5.4)
     optionalDependencies:
       typescript: 5.5.4
@@ -5667,7 +5662,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.4
-      semver: 7.6.2
+      semver: 7.6.3
       ts-api-utils: 1.3.0(typescript@5.5.4)
     optionalDependencies:
       typescript: 5.5.4
@@ -6249,7 +6244,7 @@ snapshots:
 
   delayed-stream@1.0.0: {}
 
-  dependency-cruiser@16.3.9:
+  dependency-cruiser@16.3.10:
     dependencies:
       acorn: 8.12.1
       acorn-jsx: 5.3.2(acorn@8.12.1)
@@ -6258,12 +6253,11 @@ snapshots:
       acorn-walk: 8.3.3
       ajv: 8.17.1
       commander: 12.1.0
-      enhanced-resolve: 5.17.0
+      enhanced-resolve: 5.17.1
       ignore: 5.3.1
       interpret: 3.1.1
       is-installed-globally: 1.0.0
       json5: 2.2.3
-      lodash: 4.17.21
       memoize: 10.0.0
       picocolors: 1.0.1
       picomatch: 4.0.2
@@ -6328,7 +6322,7 @@ snapshots:
 
   emoticon@4.0.1: {}
 
-  enhanced-resolve@5.17.0:
+  enhanced-resolve@5.17.1:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.1
@@ -7236,7 +7230,7 @@ snapshots:
 
   make-dir@4.0.0:
     dependencies:
-      semver: 7.6.2
+      semver: 7.6.3
 
   map-cache@0.2.2: {}
 
@@ -8107,8 +8101,6 @@ snapshots:
     dependencies:
       lru-cache: 6.0.0
 
-  semver@7.6.2: {}
-
   semver@7.6.3: {}
 
   sentence-case@3.0.4:
@@ -8435,7 +8427,7 @@ snapshots:
   tsconfig-paths-webpack-plugin@4.1.0:
     dependencies:
       chalk: 4.1.2
-      enhanced-resolve: 5.17.0
+      enhanced-resolve: 5.17.1
       tsconfig-paths: 4.2.0
 
   tsconfig-paths@4.2.0:
