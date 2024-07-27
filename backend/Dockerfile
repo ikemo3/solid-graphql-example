@@ -1,5 +1,5 @@
 # ベースイメージをビルド段階で使用
-FROM node:20.15.1-slim
+FROM node:20.16.0-slim
 
 # OpenSSLのインストール
 RUN apt-get update -y && apt-get install -y openssl
